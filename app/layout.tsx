@@ -1,15 +1,13 @@
 
 import { CartProvider } from "components/cart/cart-context";
-import { WelcomeToast } from "components/welcome-toast";
 import { getCart } from "lib/shopify";
 import { baseUrl } from "lib/utils";
 import { Poppins } from "next/font/google";
 import { ReactNode } from "react";
-import { Toaster } from "sonner";
 
+import { BoompieFooter } from "components/BoompieFooter";
 import { AnnouncementBar } from "components/layout/AnnouncementBar";
 import { BoompieHeader } from "components/layout/BoompieHeader";
-import { BoompieFooter } from "components/BoompieFooter";
 
 import "./globals.css";
 
@@ -63,8 +61,6 @@ export default async function RootLayout({
           <BoompieFooter />
 
           {/* Global notifications */}
-          <Toaster closeButton />
-          <WelcomeToast />
         </CartProvider>
       </body>
     </html>
