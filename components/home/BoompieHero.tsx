@@ -71,7 +71,6 @@ export function BoompieHero() {
           <p>New bargains. Pre-loved treasures. Vintage goods. Unbeatable prices.<br />All for a happier planet.</p>
           <div className="boompie-hero__actions">
             <Link href="/search?sort=latest-desc" className="boompie-hero__button boompie-hero__button--primary">SHOP NEW ARRIVALS</Link>
-            <Link href="/pages/locations" className="boompie-hero__button boompie-hero__button--outline">FIND A LOCATION</Link>
           </div>
         </div>
       </div>
