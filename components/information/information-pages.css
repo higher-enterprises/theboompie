@@ -1,0 +1,14 @@
+/* The Boompie information pages */
+.bp-info-page{background:#fffaf0;color:#24142d;min-height:65vh;padding-bottom:76px;font-family:inherit}
+.bp-info-hero{position:relative;overflow:hidden;background:#55258a;color:white;padding:52px max(24px,calc((100vw - 1160px)/2)) 65px}
+.bp-info-back{display:inline-block;color:#ffcb34;font-size:12px;font-weight:800;letter-spacing:.08em;text-decoration:none;margin-bottom:26px}
+.bp-info-hero h1{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(42px,6vw,78px);line-height:1.03;max-width:900px;margin:0 0 14px;text-transform:uppercase}
+.bp-info-hero p{font-size:clamp(15px,1.6vw,19px);max-width:680px;line-height:1.5;margin:0}
+.bp-info-flower{position:absolute;right:7%;top:20px;font-size:clamp(70px,12vw,170px);color:#f52d90;opacity:.75;pointer-events:none}
+.bp-info-content{max-width:980px;margin:0 auto;padding:36px 24px 0;display:grid;gap:14px}
+.bp-info-section{border-radius:18px;background:#f7ead6;padding:24px 28px}
+.bp-info-section h2{font-size:19px;color:#55258a;margin:0 0 9px;font-weight:800}
+.bp-info-section p{font-size:14px;line-height:1.75;margin:0;white-space:pre-wrap}
+.bp-info-help{margin-top:16px;padding:22px 28px;border-radius:18px;background:#ffe7f2;font-size:14px;font-weight:700}
+.bp-info-help a{color:#55258a;text-decoration:underline}
+@media(max-width:600px){.bp-info-hero{padding:38px 22px 45px}.bp-info-flower{opacity:.24}.bp-info-section{padding:20px}}

@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { addItem } from "components/cart/actions";
 import { Product, ProductVariant } from "lib/shopify/types";
 import { useSearchParams } from "next/navigation";
-import { useActionState } from "react";
+import { startTransition, useActionState } from "react";
 import { useCart } from "./cart-context";
 
 function SubmitButton({
@@ -61,33 +61,49 @@ export function AddToCart({ product }: { product: Product }) {
   const { variants, availableForSale } = product;
   const { addCartItem } = useCart();
   const searchParams = useSearchParams();
-  const [message, formAction] = useActionState(addItem, null);
+  const [message, formAction, isPending] = useActionState(addItem, null);
 
-  const variant = variants.find((variant: ProductVariant) =>
-    variant.selectedOptions.every(
-      (option) => option.value === searchParams.get(option.name.toLowerCase()),
-    ),
-  );
-  const defaultVariantId = variants.length === 1 ? variants[0]?.id : undefined;
-  const selectedVariantId = variant?.id || defaultVariantId;
-  const addItemAction = formAction.bind(null, selectedVariantId);
-  const finalVariant = variants.find(
-    (variant) => variant.id === selectedVariantId,
-  )!;
+  // Shopify products with one variant should not require URL option parameters.
+  // For multi-variant products, match every selected option against the URL.
+  const variant =
+    variants.length === 1
+      ? variants[0]
+      : variants.find((candidate: ProductVariant) =>
+          candidate.selectedOptions.every((option) => {
+            const selected = searchParams.get(option.name.toLowerCase());
+            return selected !== null && selected === option.value;
+          }),
+        );
+  // Fall back to the first purchasable variant when URL options are absent.
+  const finalVariant = variant ?? variants.find((candidate) => candidate.availableForSale);
+  const selectedVariantId = finalVariant?.id;
+
 
   return (
     <form
-      action={async () => {
-        addCartItem(finalVariant, product);
-        addItemAction();
+      action={formAction}
+      onSubmit={() => {
+        if (finalVariant) {
+          startTransition(() => {
+            addCartItem(finalVariant, product);
+          });
+        }
       }}
     >
-      <SubmitButton
-        availableForSale={availableForSale}
-        selectedVariantId={selectedVariantId}
-      />
-      <p aria-live="polite" className="sr-only" role="status">
-        {message}
+      <input type="hidden" name="variantId" value={selectedVariantId ?? ""} />
+      <fieldset disabled={isPending}>
+        <SubmitButton
+          availableForSale={availableForSale}
+          selectedVariantId={selectedVariantId}
+        />
+      </fieldset>
+
+      <p aria-live="polite" role="status">
+        {variants.length === 0
+          ? "This product has no Shopify variants available. Check its Storefront API product query and publication."
+          : !selectedVariantId
+            ? "No purchasable Shopify variant found for this product."
+            : message}
       </p>
     </form>
   );

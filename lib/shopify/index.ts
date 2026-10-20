@@ -97,8 +97,10 @@ export async function shopifyFetch<T>({
 
     const body = await result.json();
 
-    if (body.errors) {
-      throw body.errors[0];
+    if (!result.ok || body.errors?.length) {
+      const detail = body.errors?.map((e: { message?: string }) => e.message || JSON.stringify(e)).join('; ')
+        || `Shopify HTTP ${result.status}`;
+      throw new Error(detail);
     }
 
     return {
@@ -222,21 +224,48 @@ export async function createCart(): Promise<Cart> {
     query: createCartMutation,
   });
 
-  return reshapeCart(res.body.data.cartCreate.cart);
+  const result = res.body.data.cartCreate;
+  const errors = (result as typeof result & { userErrors?: { message: string }[] }).userErrors;
+  if (errors?.length) throw new Error(`Shopify cartCreate: ${errors.map(e => e.message).join('; ')}`);
+  if (!result.cart) throw new Error('Shopify cartCreate returned no cart');
+  return reshapeCart(result.cart);
 }
 
 export async function addToCart(
   lines: { merchandiseId: string; quantity: number }[]
 ): Promise<Cart> {
-  const cartId = (await cookies()).get("cartId")?.value!;
-  const res = await shopifyFetch<ShopifyAddToCartOperation>({
-    query: addToCartMutation,
-    variables: {
-      cartId,
-      lines,
-    },
-  });
-  return reshapeCart(res.body.data.cartLinesAdd.cart);
+  const cookieStore = await cookies();
+  let cartId = cookieStore.get("cartId")?.value;
+
+  // First-time shoppers need a Shopify cart before adding a line.
+  if (!cartId) {
+    const cart = await createCart();
+    if (!cart.id) throw new Error("Shopify did not return a cart ID");
+    cartId = cart.id;
+    cookieStore.set("cartId", cartId, { path: "/", sameSite: "lax", httpOnly: true, secure: process.env.NODE_ENV === "production" });
+  }
+
+  const addLines = async (id: string) => {
+    const res = await shopifyFetch<ShopifyAddToCartOperation>({
+      query: addToCartMutation,
+      variables: { cartId: id, lines },
+    });
+    const result = res.body.data.cartLinesAdd;
+    const errors = (result as typeof result & { userErrors?: { message: string }[] }).userErrors;
+    if (errors?.length) throw new Error(`Shopify cartLinesAdd: ${errors.map((e) => e.message).join("; ")}`);
+    return result.cart;
+  };
+
+  let cart = await addLines(cartId);
+  // Shopify returns null for a completed/deleted cart.
+  if (!cart) {
+    const replacement = await createCart();
+    if (!replacement.id) throw new Error("Shopify did not return a replacement cart ID");
+    cookieStore.set("cartId", replacement.id, { path: "/", sameSite: "lax", httpOnly: true, secure: process.env.NODE_ENV === "production" });
+    cart = await addLines(replacement.id);
+  }
+  if (!cart) throw new Error("Shopify returned no cart after adding item");
+  return reshapeCart(cart);
 }
 
 export async function removeFromCart(lineIds: string[]): Promise<Cart> {

@@ -1,0 +1,56 @@
+/* Featured cards only. Imported after boompie-hero-scroll.css.
+   Keeps the existing marquee timing, duplicate sets, and Shopify product data. */
+.bpw-featured {
+  --bpw-featured-card-width: 224px;
+  --bpw-featured-card-gap: 16px;
+}
+
+/* Keep the marquee layout unchanged, override only the card dimensions. */
+.bpw-featured .bpw-card {
+  width: var(--bpw-featured-card-width) !important;
+  min-width: var(--bpw-featured-card-width) !important;
+  max-width: var(--bpw-featured-card-width) !important;
+  flex: 0 0 var(--bpw-featured-card-width) !important;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 0 !important;
+  /* A scalable, gently wavy outline with smooth curves on every edge. */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M 68 52 C 140 6 205 64 280 37 C 358 9 420 65 500 33 C 583 3 650 63 730 34 C 808 7 875 55 933 51 C 987 74 968 139 972 211 C 979 290 952 350 976 422 C 997 498 949 562 976 640 C 994 718 950 789 968 872 C 961 949 912 970 839 961 C 761 950 694 985 617 963 C 536 943 464 989 382 964 C 299 942 224 989 150 962 C 73 979 29 947 32 870 C 49 792 14 719 36 645 C 56 563 12 491 35 418 C 57 339 13 270 32 196 C 18 128 23 78 68 52 Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M 68 52 C 140 6 205 64 280 37 C 358 9 420 65 500 33 C 583 3 650 63 730 34 C 808 7 875 55 933 51 C 987 74 968 139 972 211 C 979 290 952 350 976 422 C 997 498 949 562 976 640 C 994 718 950 789 968 872 C 961 949 912 970 839 961 C 761 950 694 985 617 963 C 536 943 464 989 382 964 C 299 942 224 989 150 962 C 73 979 29 947 32 870 C 49 792 14 719 36 645 C 56 563 12 491 35 418 C 57 339 13 270 32 196 C 18 128 23 78 68 52 Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.bpw-featured .bpw-card-image {
+  width: 100%;
+  height: 224px !important;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 18px 18px;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.bpw-featured .bpw-card-photo {
+  object-fit: cover;
+  border-radius: 0 0 18px 18px;
+}
+
+.bpw-featured .bpw-card-label {
+  min-height: 65px;
+  padding: 11px 15px 15px;
+  border-radius: 0 !important;
+}
+
+.bpw-featured .bpw-card-details strong {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  .bpw-featured { --bpw-featured-card-width: 180px; }
+  .bpw-featured .bpw-card-image { height: 180px !important; }
+}

@@ -1,0 +1,241 @@
+.bp-home-sections,.bp-bargain,.bp-values{max-width:1440px;margin:0 auto;padding:0 3%}.bp-masonry-top,.bp-masonry-bottom{display:grid;gap:16px;margin-bottom:14px}.bp-masonry-top{grid-template-columns:1.05fr 1fr 1fr}.bp-masonry-bottom{grid-template-columns:1fr 1fr .9fr 1.1fr}.bp-masonry-tile,.bp-category-panel,.bp-joy-club,.bp-daily-deals{position:relative;min-height:235px;border-radius:20px;overflow:hidden}.bp-masonry-image{object-fit:cover}.bp-masonry-overlay{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:25px;color:white;background:linear-gradient(90deg,rgba(0,0,0,.43),transparent 90%)}.bp-masonry-overlay h2,.bp-daily-deals h2,.bp-joy-club h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(25px,3vw,44px);line-height:1.05;margin:0 0 14px}.bp-mini-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 18px;border-radius:30px;font-size:11px;font-weight:900;text-decoration:none}.bp-mini-btn.purple{background:#55258a;color:white}.bp-mini-btn.yellow{background:#ffbc18;color:#111}.bp-category-panel{background:#f8ecd8;padding:20px 25px}.bp-category-panel h2{text-align:center;font-family:Impact,'Arial Narrow',sans-serif;font-size:25px;margin:0 0 10px}.bp-department-list{display:grid;gap:3px}.bp-department-list a{display:flex;align-items:center;gap:13px;color:#151515;text-decoration:none;font-size:12px;padding:5px 0}.bp-department-list a span:last-child{margin-left:auto;font-size:19px}.bp-department-icon{font-size:22px;color:#57238e;width:27px;text-align:center}.bp-joy-club{background:#55258a;color:white;padding:25px 30px}.bp-joy-club p{max-width:240px;font-size:13px;line-height:1.5;margin:0 0 14px}.bp-club-flower{position:absolute;right:18px;top:18px;font-size:50px;color:#ffba16}.bp-club-heart{position:absolute;right:20px;bottom:9px;font-size:53px;color:#ed347f}.bp-daily-deals{background:#ee3480;color:white;padding:24px}.bp-big-smile{float:left;margin-right:14px;font-size:62px;color:#ffba16}.bp-daily-deals p{clear:both;font-size:13px;max-width:180px;margin-bottom:15px}.bp-home-finds .bp-masonry-overlay{background:linear-gradient(90deg,rgba(40,35,0,.4),transparent)}.bp-tote .bp-masonry-overlay{background:transparent}.bp-tote-label{display:none}.bp-bargain{padding-top:8px}.bp-bargain-heading{text-align:center;margin:8px 0 20px}.bp-bargain-heading h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:29px;margin:0}.bp-bargain-heading p{font-size:13px;margin:3px}.bp-bargain-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.bp-bargain-group{position:relative;background:#f7ead6;border-radius:16px;padding:16px 9px 10px}.bp-bargain-group h3{position:absolute;top:-11px;left:25%;width:50%;text-align:center;border-radius:9px;font-size:12px;padding:5px 0;margin:0;color:#111}.bp-group-gold{background:#ffba16}.bp-group-purple{background:#55258a;color:white!important}.bp-group-pink{background:#ee3480}.bp-group-olive{background:#a5af32}.bp-bargain-items{display:grid;grid-template-columns:1fr 1fr;gap:8px}.bp-bargain-items a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:88px;border-radius:10px;background:#f1ddbd;text-decoration:none;color:#111;font-size:10px;text-align:center}.bp-bargain-symbol{font-size:38px;color:#55258a;margin-bottom:4px}.bp-values{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding-top:26px;padding-bottom:22px}.bp-values>div{display:flex;gap:12px;align-items:center}.bp-values span{font-size:48px;color:#55258a}.bp-values div:nth-child(2) span{color:#ee3480}.bp-values div:nth-child(3) span{color:#ffba16}.bp-values p{font-size:11px;line-height:1.5;margin:0}.bp-values strong{display:block;font-size:11px;margin-bottom:4px}.bp-perks{background:#e9e153;display:flex;justify-content:space-around;gap:15px;padding:15px 3%;font-size:11px;font-weight:900}.bp-perks small{display:block;font-size:9px;font-weight:500;margin-left:25px}@media(max-width:800px){.bp-masonry-top{grid-template-columns:1fr 1fr}.bp-joy-club{grid-column:span 2}.bp-masonry-bottom{grid-template-columns:1fr 1fr}.bp-bargain-grid,.bp-values{grid-template-columns:1fr 1fr}.bp-perks{flex-wrap:wrap}}@media(max-width:500px){.bp-masonry-top,.bp-masonry-bottom{grid-template-columns:1fr 1fr;gap:9px}.bp-masonry-tile,.bp-category-panel,.bp-joy-club,.bp-daily-deals{min-height:210px;border-radius:14px}.bp-category-panel{padding:12px}.bp-category-panel h2{font-size:18px}.bp-department-list a{font-size:9px;gap:5px}.bp-department-icon{font-size:16px;width:18px}.bp-joy-club{grid-column:auto;padding:15px}.bp-joy-club h2,.bp-daily-deals h2{font-size:26px}.bp-joy-club p{font-size:10px}.bp-club-flower,.bp-club-heart{display:none}.bp-masonry-overlay{padding:12px}.bp-masonry-overlay h2{font-size:25px}.bp-mini-btn{font-size:9px;padding:0 9px}.bp-bargain-grid{grid-template-columns:1fr 1fr;gap:12px}.bp-bargain-group h3{font-size:9px;left:12%;width:76%}.bp-bargain-items a{min-height:75px;font-size:9px}.bp-values{gap:8px}.bp-values span{font-size:30px}.bp-values p,.bp-values strong{font-size:9px}}
+
+
+
+/* TRUE ASYMMETRIC MASONRY: 12 columns, independently spanning rows. */
+.bp-home-sections{max-width:1440px;margin:0 auto;padding:0 3%;}
+.bp-true-masonry{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(7,88px);gap:14px;align-items:stretch;}
+.bp-true-masonry > *{min-width:0;min-height:0;position:relative;overflow:hidden;isolation:isolate;}
+.bp-true-masonry .bp-arrivals{grid-area:1 / 1 / 4 / 4;}
+.bp-true-masonry .bp-boomp-panel{grid-area:1 / 4 / 5 / 10;}
+.bp-true-masonry .bp-joy-club{grid-area:1 / 10 / 4 / 13;}
+.bp-true-masonry .bp-daily-deals{grid-area:4 / 1 / 8 / 4;}
+.bp-true-masonry .bp-kids{grid-area:5 / 4 / 8 / 7;}
+.bp-true-masonry .bp-home-finds{grid-area:5 / 7 / 8 / 10;}
+.bp-true-masonry .bp-vintage-card{grid-area:4 / 10 / 8 / 13;}
+/* Three broad, rounded organic waves per edge. No jagged polygon points or SVG. */
+.bp-true-masonry > *{border-radius:32px;}
+.bp-true-masonry .bp-masonry-image{object-fit:cover;object-position:center;}
+.bp-true-masonry .bp-masonry-overlay{padding:clamp(28px,3.4vw,48px);justify-content:flex-end;background:transparent;}
+.bp-true-masonry .bp-masonry-overlay h2{font-size:clamp(28px,2.8vw,46px);}
+.bp-true-masonry .bp-boomp-panel{display:flex;align-items:center;padding:clamp(36px,4.3vw,65px);background-color:#ffbc18;background-image:url('/assets/the-boomp.webp');background-size:cover;background-position:center;}
+.bp-true-masonry .bp-boomp-content{position:relative;z-index:1;width:62%;text-align:left;}
+.bp-true-masonry .bp-boomp-eyebrow{font-size:11px;letter-spacing:.13em;font-weight:900;color:#55258a;}
+.bp-true-masonry .bp-boomp-panel h2{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(55px,5.3vw,88px);line-height:.91;margin:12px 0 14px;color:#111;text-align:left;}
+.bp-true-masonry .bp-boomp-dot{color:#55258a;}
+.bp-true-masonry .bp-boomp-panel p{font-size:clamp(14px,1.4vw,20px);font-weight:800;color:#55258a;margin:0 0 24px;}
+.bp-true-masonry .bp-boomp-panel .bp-mini-btn{min-height:43px;padding:0 22px;}
+.bp-true-masonry .bp-joy-club{padding:clamp(24px,2.5vw,38px);display:flex;flex-direction:column;justify-content:flex-end;background:#55258a;}
+.bp-true-masonry .bp-club-bag{object-fit:cover;object-position:center;opacity:.6;z-index:-2;}
+.bp-true-masonry .bp-joy-club::before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#55258a 0%,rgba(85,37,138,.85) 43%,rgba(85,37,138,.02) 100%);z-index:-1;}
+.bp-true-masonry .bp-joy-club h2{font-size:clamp(24px,2.4vw,36px);}
+.bp-true-masonry .bp-joy-club p{font-size:12px;line-height:1.5;}
+.bp-true-masonry .bp-daily-deals{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,3vw,45px);}
+.bp-true-masonry .bp-big-smile{float:none;font-size:52px;line-height:1;margin:0 0 12px;}
+.bp-true-masonry .bp-daily-deals h2{font-size:clamp(31px,3vw,48px);}
+.bp-true-masonry .bp-vintage-card{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(28px,3vw,44px);background:#a5af32;color:#111;}
+.bp-true-masonry .bp-vintage-card > span{position:absolute;right:30px;top:20px;color:#55258a;font-size:58px;}
+.bp-true-masonry .bp-vintage-card h2{font:clamp(32px,3vw,47px)/1 Impact,'Arial Narrow',sans-serif;margin:0 0 16px;}
+.bp-true-masonry .bp-vintage-card p{font-size:13px;font-weight:700;margin:0 0 18px;}
+.bp-bargain-group{padding-top:23px;}
+.bp-bargain-group h3{z-index:1;}
+/* Narrower screens reflow to a deliberate staggered 2-column mosaic. */
+@media(max-width:900px){
+ .bp-true-masonry{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(8,145px);gap:12px;}
+ .bp-true-masonry .bp-arrivals{grid-area:1 / 1 / 3 / 2;}
+ .bp-true-masonry .bp-boomp-panel{grid-area:1 / 2 / 4 / 3;padding:30px;background-position:56% center;}
+ .bp-true-masonry .bp-joy-club{grid-area:3 / 1 / 5 / 2;}
+ .bp-true-masonry .bp-daily-deals{grid-area:5 / 1 / 7 / 2;}
+ .bp-true-masonry .bp-kids{grid-area:4 / 2 / 6 / 3;}
+ .bp-true-masonry .bp-home-finds{grid-area:7 / 1 / 9 / 2;}
+ .bp-true-masonry .bp-vintage-card{grid-area:6 / 2 / 9 / 3;}
+ .bp-true-masonry .bp-boomp-content{width:88%;}
+ .bp-true-masonry .bp-boomp-panel h2{font-size:clamp(45px,7vw,70px);}
+}
+@media(max-width:550px){
+ .bp-home-sections{padding-inline:12px;}
+ .bp-true-masonry{grid-template-rows:repeat(9,112px);gap:9px;}
+ .bp-true-masonry .bp-boomp-panel{grid-area:1 / 1 / 4 / 3;padding:30px;background-position:center;}
+ .bp-true-masonry .bp-arrivals{grid-area:4 / 1 / 6 / 2;}
+ .bp-true-masonry .bp-joy-club{grid-area:4 / 2 / 7 / 3;}
+ .bp-true-masonry .bp-daily-deals{grid-area:6 / 1 / 8 / 2;}
+ .bp-true-masonry .bp-kids{grid-area:7 / 2 / 9 / 3;}
+ .bp-true-masonry .bp-home-finds{grid-area:8 / 1 / 10 / 2;}
+ .bp-true-masonry .bp-vintage-card{grid-area:9 / 2 / 10 / 3;}
+ .bp-true-masonry .bp-masonry-overlay{padding:24px;}
+ .bp-true-masonry .bp-masonry-overlay h2{font-size:27px;}
+ .bp-true-masonry .bp-boomp-content{width:70%;}
+ .bp-true-masonry .bp-boomp-panel h2{font-size:57px;}
+ .bp-true-masonry .bp-boomp-panel p{font-size:13px;}
+ .bp-true-masonry .bp-joy-club,.bp-true-masonry .bp-daily-deals,.bp-true-masonry .bp-vintage-card{padding:23px;}
+ .bp-true-masonry .bp-joy-club h2,.bp-true-masonry .bp-daily-deals h2,.bp-true-masonry .bp-vintage-card h2{font-size:27px;}
+ .bp-true-masonry .bp-joy-club p,.bp-true-masonry .bp-daily-deals p,.bp-true-masonry .bp-vintage-card p{font-size:11px;}
+}
+
+/* Native vector waves: no stretched PNG masks, no SVG assets. */
+.bp-true-masonry > * {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 28px; /* graceful fallback for older browsers */
+  -webkit-mask: none;
+  mask: none;
+}
+/* Organic scalloped edges with genuinely rounded corners. */
+@supports (clip-path: shape(from 0% 0%, line to 100% 0%, close)) {
+  .bp-true-masonry > * {
+    border-radius: 0;
+    clip-path: shape(
+      from 8% 3%,
+      curve to 23% 3% with 12% 0% / 19% 0%,
+      curve to 39% 3% with 27% 6% / 35% 6%,
+      curve to 55% 3% with 43% 0% / 51% 0%,
+      curve to 71% 3% with 59% 6% / 67% 6%,
+      curve to 87% 3% with 75% 0% / 83% 0%,
+      /* Top-right rounded corner */
+      curve to 97% 12% with 94% 3% / 97% 6%,
+      curve to 97% 28% with 100% 16% / 100% 24%,
+      curve to 97% 44% with 94% 32% / 94% 40%,
+      curve to 97% 60% with 100% 48% / 100% 56%,
+      curve to 97% 76% with 94% 64% / 94% 72%,
+      curve to 97% 88% with 100% 80% / 100% 84%,
+      /* Bottom-right rounded corner */
+      curve to 87% 97% with 97% 94% / 94% 97%,
+      curve to 71% 97% with 83% 100% / 75% 100%,
+      curve to 55% 97% with 67% 94% / 59% 94%,
+      curve to 39% 97% with 51% 100% / 43% 100%,
+      curve to 23% 97% with 35% 94% / 27% 94%,
+      curve to 8% 97% with 19% 100% / 12% 100%,
+      /* Bottom-left rounded corner */
+      curve to 3% 88% with 5% 97% / 3% 94%,
+      curve to 3% 72% with 0% 84% / 0% 76%,
+      curve to 3% 56% with 6% 68% / 6% 60%,
+      curve to 3% 40% with 0% 52% / 0% 44%,
+      curve to 3% 24% with 6% 36% / 6% 28%,
+      curve to 3% 12% with 0% 20% / 0% 16%,
+      /* Top-left rounded corner */
+      curve to 8% 3% with 3% 6% / 5% 3%,
+      close
+    );
+  }
+}
+
+/* Every tile gets the same warm yellow photographic tint, full-card and bottom-heavy. */
+.bp-true-masonry > *::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(255, 196, 34, .10) 0%,
+    rgba(255, 189, 22, .16) 38%,
+    rgba(104, 64, 0, .43) 72%,
+    rgba(50, 29, 0, .78) 100%);
+}
+/* Keep imagery behind tint and content above it. */
+.bp-true-masonry .bp-masonry-image,
+.bp-true-masonry .bp-club-bag { z-index: 0; }
+.bp-true-masonry .bp-masonry-overlay,
+.bp-true-masonry .bp-boomp-content,
+.bp-true-masonry .bp-joy-club > :not(.bp-club-bag),
+.bp-true-masonry .bp-daily-deals > *,
+.bp-true-masonry .bp-vintage-card > :not(.bp-masonry-image) {
+  position: relative;
+  z-index: 2;
+}
+.bp-true-masonry .bp-masonry-overlay { background: none; }
+.bp-true-masonry .bp-home-finds .bp-masonry-overlay { background: none; }
+.bp-true-masonry .bp-boomp-panel {
+  background-color: #bb8731;
+  background-image: url('/assets/the-boomp.webp');
+  background-size: cover;
+  background-position: center;
+}
+.bp-true-masonry .bp-boomp-panel h2,
+.bp-true-masonry .bp-boomp-panel p,
+.bp-true-masonry .bp-boomp-eyebrow,
+.bp-true-masonry .bp-boomp-dot {
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,.48);
+}
+.bp-true-masonry .bp-joy-club::before { display: none; }
+.bp-true-masonry .bp-club-bag { opacity: 1; }
+.bp-true-masonry .bp-daily-deals {
+  background: #e83779 url('/assets/good-deals-daily.png') center / cover no-repeat;
+}
+.bp-true-masonry .bp-vintage-card {
+  background: #7c5836 url('/assets/vintage-finds.png') center / cover no-repeat;
+  color: #fff;
+}
+.bp-true-masonry .bp-vintage-card > .bp-masonry-image { display: none; }
+.bp-true-masonry .bp-vintage-card > span {
+  position: absolute;
+  z-index: 2;
+  color: #ffbc18;
+}
+.bp-true-masonry .bp-vintage-card h2,
+.bp-true-masonry .bp-vintage-card p { color: #fff; }
+
+
+/* FINAL DESIGN: rounded rectangles, not clipped waves. */
+.bp-true-masonry > * {
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  border-radius: 26px !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+@media (max-width: 550px) {
+  .bp-true-masonry > * { border-radius: 18px !important; }
+}
+
+/* Full-card color grading: purple, pink and golden yellow, darker at the bottom. */
+.bp-true-masonry > *::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(85, 37, 138, .27) 0%,
+    rgba(233, 52, 128, .25) 30%,
+    rgba(255, 188, 24, .22) 53%,
+    rgba(65, 24, 83, .62) 77%,
+    rgba(34, 13, 48, .88) 100%);
+}
+
+/* Avoid a second rectangular gradient over the photography. */
+.bp-true-masonry .bp-masonry-overlay,
+.bp-true-masonry .bp-home-finds .bp-masonry-overlay {
+  background: transparent !important;
+}
+
+/* Overlay copy stays legible on every photograph. */
+.bp-true-masonry .bp-masonry-overlay,
+.bp-true-masonry .bp-boomp-content,
+.bp-true-masonry .bp-joy-club > :not(.bp-club-bag),
+.bp-true-masonry .bp-daily-deals > *,
+.bp-true-masonry .bp-vintage-card > :not(.bp-masonry-image) {
+  position: relative;
+  z-index: 2;
+}
+.bp-true-masonry h2,
+.bp-true-masonry p,
+.bp-true-masonry .bp-boomp-eyebrow,
+.bp-true-masonry .bp-big-smile,
+.bp-true-masonry .bp-club-flower {
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(17, 7, 30, .85),
+               0 5px 16px rgba(17, 7, 30, .65);
+}
+/* Button lettering should stay crisp in its intended color. */
+.bp-true-masonry .bp-mini-btn { text-shadow: none; }
+.bp-true-masonry .bp-mini-btn.purple { color: #fff; }
+.bp-true-masonry .bp-mini-btn.yellow { color: #111; }

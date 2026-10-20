@@ -1,21 +1,22 @@
-import { Carousel } from "components/carousel";
-import { ThreeItemGrid } from "components/grid/three-items";
-import Footer from "components/layout/footer";
+import { BoompieHomeHero } from 'components/home/boompie-home-hero';
+import { FeaturedFinds } from 'components/home/FeaturedFinds';
+import { BargainBasement, HomeMasonry, HomeValues } from 'components/home/HomeSections';
+import { NewArrivals } from 'components/NewArrivals';
+import { getCollectionProducts } from 'lib/shopify';
 
-export const metadata = {
-  description:
-    "High-performance ecommerce store built with Next.js, Vercel, and Shopify.",
-  openGraph: {
-    type: "website",
-  },
-};
+// Change to 1 for four featured items or 2 for eight.
+const FEATURED_ROWS: 1 | 2 = 2;
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getCollectionProducts({ collection: 'featured' });
   return (
     <>
-      <ThreeItemGrid />
-      <Carousel />
-      <Footer />
+      <BoompieHomeHero />
+      <FeaturedFinds products={products} rows={FEATURED_ROWS} />
+      <NewArrivals/>
+      <HomeMasonry />
+      <BargainBasement />
+      <HomeValues />
     </>
   );
 }
