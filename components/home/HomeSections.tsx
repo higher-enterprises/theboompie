@@ -10,6 +10,13 @@ function ImageTile({src,alt,children,className=''}:{src:string;alt:string;childr
 }
 
 export function HomeMasonry(){return <section className="bp-home-sections" aria-label="Shop The Boompie">
+  <div className="bp-shop-heading">
+    <div className="bp-shop-heading-copy">
+      <span className="bp-shop-flower" aria-hidden="true">✿</span>
+      <div><h2>SHOP THE BOOMPIE</h2><p>Find your next favorite thing.</p></div>
+    </div>
+    <Link className="bp-shop-all" href="/shop">SHOP ALL DEPARTMENTS <span aria-hidden="true">→</span></Link>
+  </div>
   <div className="bp-true-masonry">
     <ImageTile src="/assets/new-arrivals.png" alt="Curated vintage clothing racks" className="bp-arrivals"><h2>NEW<br/>ARRIVALS</h2><Link className="bp-mini-btn purple" href="/search?sort=latest-desc">SHOP NOW</Link></ImageTile>
     <div className="bp-category-panel bp-boomp-panel">

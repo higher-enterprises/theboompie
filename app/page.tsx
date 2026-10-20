@@ -12,11 +12,21 @@ export default async function HomePage() {
   return (
     <>
       <BoompieHomeHero />
-      <FeaturedFinds products={products} rows={FEATURED_ROWS} />
-      <NewArrivals/>
-      <HomeMasonry />
-      <BargainBasement />
-      <HomeValues />
+      <section className="-mt-3 md:-mt-4" aria-label="Featured finds">
+        <FeaturedFinds products={products} rows={FEATURED_ROWS} />
+      </section>
+      <section className="pt-3 md:pt-5" aria-label="New arrivals">
+        <NewArrivals />
+      </section>
+      <section className="pt-3 md:pt-5" aria-label="Shop the Boompie">
+        <HomeMasonry />
+      </section>
+      <section className="pt-3 md:pt-5" aria-label="Bargain basement">
+        <BargainBasement />
+      </section>
+      <section className="pt-2 md:pt-4">
+        <HomeValues />
+      </section>
     </>
   );
 }

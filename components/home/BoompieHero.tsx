@@ -59,7 +59,7 @@ export function BoompieHero() {
               <path d={photoWave} />
             </clipPath>
           </defs>
-          <image href="/boompie/hero/shopper-photo.webp" x="0" y="0" width="1000" height="600" preserveAspectRatio="xMidYMid slice" clipPath="url(#boompie-photo-wave)" />
+          <image href="/boompie/hero/shopper-photo.png" x="0" y="0" width="1000" height="600" preserveAspectRatio="xMidYMid slice" clipPath="url(#boompie-photo-wave)" />
         </svg>
       </div>
       <div className="boompie-hero__yellow">
@@ -67,8 +67,8 @@ export function BoompieHero() {
           <path d={yellowWave} fill="#ffb914" />
         </svg>
         <div className="boompie-hero__copy">
-          <h1 className="boompie-hero__title">GOOD FINDS.<br />GREATER <span>J<span className="boompie-hero__smile">☺</span>Y.</span></h1>
-          <p>Pre-loved treasures. Unbeatable prices.<br />All for a happier planet.</p>
+          <h1 className="boompie-hero__title">DISCOVER THE <br />GREATEST <span>J<span className="boompie-hero__smile">☺</span>Y.</span></h1>
+          <p>New bargains. Pre-loved treasures. Vintage goods. Unbeatable prices.<br />All for a happier planet.</p>
           <div className="boompie-hero__actions">
             <Link href="/search?sort=latest-desc" className="boompie-hero__button boompie-hero__button--primary">SHOP NEW ARRIVALS</Link>
             <Link href="/pages/locations" className="boompie-hero__button boompie-hero__button--outline">FIND A LOCATION</Link>

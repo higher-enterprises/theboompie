@@ -1,6 +1,6 @@
+import type { Product } from "lib/shopify/types";
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "lib/shopify/types";
 import "./boompie-hero-scroll.css";
 import "./featured-wiggle.css";
 
@@ -29,7 +29,14 @@ export function FeaturedFinds({ products, rows = 1, durationSeconds = 65 }: Prop
   const visible = products.slice(0, rows * 4);
   if (!visible.length) return <section className="bpw-featured" aria-label="Featured finds"><p className="bpw-empty">Add products to your Shopify featured collection to display them here.</p></section>;
   return (
-    <section className="bpw-featured" aria-label="Featured finds">
+    <section className="bpw-featured" aria-labelledby="bpw-featured-title">
+      <div className="bpw-featured-heading">
+        <div className="bpw-featured-heading-copy">
+          <span className="bpw-featured-flower" aria-hidden="true">✿</span>
+          <div><h2 id="bpw-featured-title">FEATURED FINDS</h2><p>Discover something worth smiling about.</p></div>
+        </div>
+        <Link className="bpw-shop-all" href="/search?sort=featured">SHOP ALL FEATURED FINDS <span aria-hidden="true">→</span></Link>
+      </div>
       <div className="bpw-marquee" role="region" aria-label="Slowly scrolling featured products" tabIndex={0}>
         <div className="bpw-marquee-track" style={{ "--bpw-duration": `${Math.max(25, durationSeconds)}s` } as React.CSSProperties}>
           <div className="bpw-marquee-set">{visible.map((product, index) => <ProductCard key={product.id} product={product} index={index} />)}</div>

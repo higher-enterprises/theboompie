@@ -3,21 +3,6 @@
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
 
-/* Poppins is loaded by next/font/google in app/layout.tsx. */
-@theme inline {
-  --font-sans: var(--font-poppins);
-}
-
-@layer base {
-  html {
-    font-family: var(--font-poppins), sans-serif;
-  }
-
-  body {
-    font-family: var(--font-poppins), sans-serif;
-  }
-}
-
 @layer base {
   *,
   ::after,
@@ -87,3 +72,7 @@ button {
   filter: saturate(1.3) contrast(1.05) sepia(0.1);
   transform: scale(1.04);
 }
+/* Prevent full-width moving rails and decorative hero art from widening the page. */
+html { max-width:100%; overflow-x:clip; }
+body { max-width:100%; min-width:0; overflow-x:clip; }
+#main-content { width:100%; min-width:0; max-width:100%; overflow-x:clip; }
