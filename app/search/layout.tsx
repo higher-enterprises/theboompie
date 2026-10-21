@@ -9,11 +9,9 @@ export default function SearchLayout({
 }) {
   return (
     <>
-      <main className="mx-auto min-h-screen w-full max-w-(--breakpoint-2xl) px-4 pb-8 text-black dark:text-white">
-        <Suspense fallback={null}>
-          <ChildrenWrapper>{children}</ChildrenWrapper>
-        </Suspense>
-      </main>
+      <Suspense fallback={null}>
+        <ChildrenWrapper>{children}</ChildrenWrapper>
+      </Suspense>
       <Footer />
     </>
   );
