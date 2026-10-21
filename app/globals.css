@@ -1,8 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import "tailwindcss";
 
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
+
+@theme inline {
+  --font-sans: var(--font-poppins);
+}
+
+@layer base {
+  body, button, input, select, textarea {
+    font-family: var(--font-poppins), Arial, sans-serif;
+  }
+}
+
 
 @layer base {
   *,
@@ -83,7 +93,7 @@ body { max-width:100%; min-width:0; overflow-x:clip; }
 .bpna-section .bpna-heading h2,
 .bp-home-sections .bp-shop-heading h2,
 .bp-bargain .bp-bargain-heading h2 {
-  font-family: 'Titan One', sans-serif !important;
+  font-family: var(--font-titan-one), sans-serif !important;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.1;

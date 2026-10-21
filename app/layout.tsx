@@ -2,7 +2,7 @@
 import { CartProvider } from "components/cart/cart-context";
 import { getCart } from "lib/shopify";
 import { baseUrl } from "lib/utils";
-import { Poppins } from "next/font/google";
+import { Poppins, Titan_One } from "next/font/google";
 import { ReactNode } from "react";
 
 import { BoompieFooter } from "components/BoompieFooter";
@@ -15,7 +15,14 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
-  variable: "--font-geist-sans",
+  variable: "--font-poppins",
+});
+
+const titanOne = Titan_One({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-titan-one",
 });
 
 const { SITE_NAME } = process.env;
@@ -43,7 +50,7 @@ export default async function RootLayout({
   const cart = getCart();
 
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={`${poppins.variable} ${titanOne.variable}`}>
       <body className={`${poppins.className} min-h-screen bg-[#fffaf0] text-black selection:bg-[#ffba16] selection:text-black`}>
         <CartProvider cartPromise={cart}>
           {/* Global announcement bar */}
