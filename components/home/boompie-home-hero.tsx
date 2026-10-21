@@ -21,8 +21,8 @@ export type BoompieHomeHeroProps = {
 };
 
 const defaultButtons: BoompieHeroButton[] = [
-  { label: "SHOP NEW ARRIVALS", href: "/search?sort=latest-desc", variant: "primary" },
-  { label: "SHOP OUR BARGAINS", href: "/finds/under-5", variant: "outline" },
+  { label: "SHOP NEW ARRIVALS", href: "/shop/new-arrivals", variant: "primary" },
+  { label: "SHOP OUR BARGAINS", href: "/shop/bargain-basement", variant: "outline" },
 ];
 
 export function BoompieHomeHero({

@@ -70,7 +70,7 @@ export function BoompieHero() {
           <h1 className="boompie-hero__title">DISCOVER THE <br />GREATEST <span>J<span className="boompie-hero__smile">☺</span>Y.</span></h1>
           <p>New bargains. Pre-loved treasures. Vintage goods. Unbeatable prices.<br />All for a happier planet.</p>
           <div className="boompie-hero__actions">
-            <Link href="/search?sort=latest-desc" className="boompie-hero__button boompie-hero__button--primary">SHOP NEW ARRIVALS</Link>
+            <Link href="/shop/new-arrivals" className="boompie-hero__button boompie-hero__button--primary">SHOP NEW ARRIVALS</Link>
           </div>
         </div>
       </div>
