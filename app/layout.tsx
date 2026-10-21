@@ -13,20 +13,20 @@ import "./globals.css";
 
 const poppins = localFont({
   src: [
-    { path: "../public/fonts/Poppins-Light.ttf", weight: "300", style: "normal" },
-    { path: "../public/fonts/Poppins-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../public/fonts/Poppins-Medium.ttf", weight: "500", style: "normal" },
-    { path: "../public/fonts/Poppins-SemiBold.ttf", weight: "600", style: "normal" },
-    { path: "../public/fonts/Poppins-Bold.ttf", weight: "700", style: "normal" },
-    { path: "../public/fonts/Poppins-ExtraBold.ttf", weight: "800", style: "normal" },
-    { path: "../public/fonts/Poppins-Black.ttf", weight: "900", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-Light.ttf", weight: "300", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-ExtraBold.ttf", weight: "800", style: "normal" },
+    { path: "../fonts/Poppins/Poppins-Black.ttf", weight: "900", style: "normal" },
   ],
   display: "swap",
   variable: "--font-poppins",
 });
 
 const titanOne = localFont({
-  src: "../public/fonts/TitanOne-Regular.ttf",
+  src: "../fonts/Titan_One/TitanOne-Regular.ttf",
   weight: "400",
   style: "normal",
   display: "swap",
