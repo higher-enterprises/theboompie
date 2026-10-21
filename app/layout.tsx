@@ -2,7 +2,7 @@
 import { CartProvider } from "components/cart/cart-context";
 import { getCart } from "lib/shopify";
 import { baseUrl } from "lib/utils";
-import { Poppins, Titan_One } from "next/font/google";
+import localFont from "next/font/local";
 import { ReactNode } from "react";
 
 import { BoompieFooter } from "components/BoompieFooter";
@@ -11,16 +11,24 @@ import { BoompieHeader } from "components/layout/BoompieHeader";
 
 import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+const poppins = localFont({
+  src: [
+    { path: "../public/fonts/Poppins-Light.ttf", weight: "300", style: "normal" },
+    { path: "../public/fonts/Poppins-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/Poppins-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../public/fonts/Poppins-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../public/fonts/Poppins-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../public/fonts/Poppins-ExtraBold.ttf", weight: "800", style: "normal" },
+    { path: "../public/fonts/Poppins-Black.ttf", weight: "900", style: "normal" },
+  ],
   display: "swap",
   variable: "--font-poppins",
 });
 
-const titanOne = Titan_One({
-  subsets: ["latin"],
+const titanOne = localFont({
+  src: "../public/fonts/TitanOne-Regular.ttf",
   weight: "400",
+  style: "normal",
   display: "swap",
   variable: "--font-titan-one",
 });
