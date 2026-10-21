@@ -30,6 +30,7 @@ export const categories: BoompieCategory[] = [
   { name: 'Electronics', slug: 'electronics', collection: 'electronics' },
   { name: 'Books', slug: 'books', collection: 'books' },
     { name: 'Music', slug: 'music', collection: 'music' },
+    { name: 'Video', slug: 'video', collection: 'video' },
   { name: 'Vintage', slug: 'vintage', collection: 'vintage', children: [
     { name: 'Collectibles', slug: 'collectibles', collection: 'collectibles' }
   ] },

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import "tailwindcss";
 
 @plugin "@tailwindcss/container-queries";
@@ -76,3 +77,51 @@ button {
 html { max-width:100%; overflow-x:clip; }
 body { max-width:100%; min-width:0; overflow-x:clip; }
 #main-content { width:100%; min-width:0; max-width:100%; overflow-x:clip; }
+
+/* BOOMPIE homepage section headings: consistent retro display lettering. */
+.bpw-featured-heading h2,
+.bpna-section .bpna-heading h2,
+.bp-home-sections .bp-shop-heading h2,
+.bp-bargain .bp-bargain-heading h2 {
+  font-family: 'Titan One', sans-serif !important;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.bpw-featured-heading h2,
+.bpna-section .bpna-heading h2,
+.bp-home-sections .bp-shop-heading h2 {
+  font-size: 32px;
+}
+
+.bp-bargain .bp-bargain-heading h2 {
+  font-size: 25px;
+}
+
+@media (max-width: 600px) {
+  .bpw-featured-heading h2,
+  .bpna-section .bpna-heading h2,
+  .bp-home-sections .bp-shop-heading h2 {
+    font-size: 26px;
+  }
+  .bp-bargain .bp-bargain-heading h2 {
+    font-size: 22px;
+  }
+}
+
+/* Subtle dividers between the homepage shopping sections. */
+.boompie-section-divider {
+  width: 85%;
+  max-width: 1280px;
+  height: 1px;
+  margin: 8px auto;
+  background-color: #dedbd5;
+}
+
+@media (max-width: 600px) {
+  .boompie-section-divider {
+    width: calc(100% - 32px);
+    margin: 6px auto;
+  }
+}

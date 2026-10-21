@@ -1,4 +1,4 @@
-import Footer from "components/layout/footer";
+
 import { Gallery } from "components/product/gallery";
 import { ProductDescription } from "components/product/product-description";
 import { ProductTabs } from "components/product/product-tabs";
@@ -103,7 +103,6 @@ export default async function ProductPage(props: {
         <ProductTabs product={product} />
         <RelatedProducts id={product.id} />
       </main>
-      <Footer />
     </>
   );
 }

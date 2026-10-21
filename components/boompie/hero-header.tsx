@@ -6,26 +6,11 @@ const yellowPath = 'M 43 90 C 18 48 87 31 143 47 C 205 67 238 36 301 49 C 362 63
 
 const photoPath = 'M 66 80 C 105 26 169 30 224 46 C 285 64 323 25 390 42 C 451 62 496 20 559 39 C 622 57 676 22 736 43 C 799 63 846 31 907 53 C 967 74 989 104 968 150 C 995 191 983 231 970 267 C 993 305 989 344 974 382 C 994 422 988 463 958 493 C 930 536 878 534 816 527 C 748 520 710 555 645 539 C 580 525 540 551 479 537 C 413 524 370 555 303 537 C 240 522 203 553 145 536 C 92 520 51 531 43 488 C 23 454 46 425 37 391 C 19 357 40 330 36 296 C 16 263 39 234 36 202 C 17 165 42 123 66 80 Z';
 
-function PinIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      aria-hidden="true"
-    >
-      <path d="M12 22S5 13.7 5 9a7 7 0 0 1 14 0c0 4.7-7 13-7 13Z" />
-      <circle cx="12" cy="9" r="2" />
-    </svg>
-  );
-}
-
 export function BoompieHeroHeader() {
   return (
     <section
       className="bh-hero"
-      aria-label="Good finds, greater joy"
+      aria-label="Discover the greatest joy"
     >
       <svg
         className="bh-photo-art"
@@ -74,18 +59,14 @@ export function BoompieHeroHeader() {
         </span>
 
         <h1>
-          GOOD FINDS.
-          <br />
-          GREATER{' '}
-          <span className="bh-joy">
-            J<span className="bh-smile">☺</span>Y.
-          </span>
+          <span className="bh-headline-line">DISCOVER THE</span>
+          <span className="bh-headline-line">GREATEST <span className="bh-joy">J<span className="bh-smile">☺</span>Y.</span></span>
         </h1>
 
         <p>
-          Pre-loved treasures. Unbeatable prices.
+          New finds. Pre-loved treasures. Unbeatable prices.
           <br />
-          All for a happier planet.
+          Great deals for a happier planet.
         </p>
 
         <div className="bh-hero-actions">
@@ -98,10 +79,9 @@ export function BoompieHeroHeader() {
 
           <Link
             className="bh-btn bh-btn-outline"
-            href="/pages/locations"
+            href="/finds/under-5"
           >
-            <PinIcon />
-            FIND A LOCATION
+            SHOP OUR BARGAINS →
           </Link>
         </div>
       </div>

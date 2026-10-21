@@ -25,26 +25,34 @@
 }
 
 .bp-footer-inner { max-width: 1500px; margin: 0 auto; position: relative; z-index: 2; }
-.bp-footer-grid { display: grid; grid-template-columns: minmax(210px,1.35fr) minmax(135px,.8fr) minmax(160px,1fr) minmax(175px,1.12fr) minmax(260px,1.7fr); gap: clamp(20px,2.2vw,42px); }
+.bp-footer-grid { display: grid; grid-template-columns: minmax(200px,1.25fr) minmax(195px,1.05fr) minmax(210px,1.4fr) minmax(175px,1.12fr) minmax(260px,1.7fr); gap: clamp(20px,2.2vw,42px); }
 .bp-footer-brand { padding-top: 30px; }
 .bp-footer-logo { display: block; width: 100%; max-width: 330px; height: auto; }
 .bp-footer-column { border-left: 1px solid rgba(255,255,255,.24); padding-left: clamp(14px,1.7vw,28px); }
-.bp-footer-column h2,.bp-footer-join h2 { font: 800 15px/1.3 Poppins,Arial,sans-serif; letter-spacing: .12em; margin: 0 0 22px; color: #fff; }
+.bp-footer-column h2,.bp-footer-join h2 { font: 800 15px/1.3 Poppins,Arial,sans-serif; letter-spacing: .12em; margin: 0 0 22px; color: #ffc42b; }
+@media (min-width: 1151px) { .bp-footer-column h2 { white-space: nowrap; } }
 .bp-footer-column ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 11px; }
+.bp-footer-column .bp-footer-shop-links { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
 .bp-footer-column a { color: #fff; text-decoration: none; font: 400 13px/1.5 Poppins,Arial,sans-serif; }
 .bp-footer-column a:hover,.bp-footer-column a:focus-visible { color: #ffd24d; text-decoration: underline; }
 .bp-footer-join { border-left: 1px solid rgba(255,255,255,.24); padding-left: clamp(18px,2.1vw,34px); }
 .bp-footer-join p { font: 400 13px/1.75 Poppins,Arial,sans-serif; margin: 0 0 23px; }
-.bp-footer-signup { display: flex; align-items: stretch; width: 100%; background: #fff9f2; border: 2px solid #fff; border-radius: 50px; padding: 3px; min-height: 53px; }
-.bp-footer-signup input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 0 16px; background: transparent; color: #301344; font: 13px Poppins,Arial,sans-serif; }
+.bp-footer-signup { display: flex; align-items: stretch; width: 100%; background: #fff9f2; border: 2px solid #fff; border-radius: 50px; padding: 3px; min-height: 53px; overflow: hidden; }
+.bp-footer-signup input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 0 16px; background: transparent; color: #301344; font: 13px Poppins,Arial,sans-serif; box-shadow: none; appearance: none; }
+.bp-footer-signup input:focus, .bp-footer-signup input:focus-visible { outline: none; box-shadow: none; border: 0; background: transparent; }
+.bp-footer-signup:focus-within { outline: 2px solid #ffd24d; outline-offset: 3px; }
 .bp-footer-signup button { border: 0; border-radius: 50px; background: #ed348f; color: white; font: 800 12px Poppins,Arial,sans-serif; letter-spacing: .08em; padding: 0 22px; cursor: pointer; }
 .bp-footer-signup button:hover { background: #c82078; }
-.bp-footer-social { display: flex; align-items: center; gap: 18px; margin: 28px 0; }
+.bp-footer-social { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin: 28px 0; }
 .bp-footer-social span { font: 800 10px Poppins,Arial,sans-serif; letter-spacing: .12em; }
-.bp-footer-social a { color: white; font-size: 23px; text-decoration: none; }
+.bp-footer-social-links { display: flex; align-items: center; gap: 13px; }
+.bp-footer-social-links a { display: inline-flex; align-items: center; justify-content: center; width: 25px; height: 25px; color: #fff; transition: color .2s, transform .2s; }
+.bp-footer-social-links a:hover, .bp-footer-social-links a:focus-visible { color: #ffc42b; transform: translateY(-2px); }
+.bp-footer-social-links svg { display: block; width: 22px; height: 22px; }
 .bp-footer-payments { border-top: 1px solid rgba(255,255,255,.4); padding-top: 20px; }
-.bp-footer-payments h3 { font: 800 12px Poppins,Arial,sans-serif; letter-spacing: .13em; margin: 0 0 12px; }
-.bp-footer-payments p { font-size: 11px; opacity: .85; }
+.bp-footer-payments h3 { font: 800 12px Poppins,Arial,sans-serif; letter-spacing: .13em; margin: 0 0 12px; color: #ffc42b; }
+.bp-footer-payment-cards { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.bp-footer-payment-cards img { display: block; width: 57px; height: 36px; object-fit: contain; border-radius: 5px; }
 .bp-footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-top: 1px solid rgba(255,255,255,.45); margin-top: 42px; padding-top: 23px; font: 12px/1.6 Poppins,Arial,sans-serif; }
 .bp-footer-bottom b { color: #f49fce; padding: 0 10px; }
 .bp-footer-flower,.bp-footer-spark { position: absolute; pointer-events: none; line-height: 1; z-index: 1; }
@@ -54,4 +62,5 @@
 .bp-footer-spark-right { font-size: 62px; color: #f53294; right: 4%; bottom: 28px; }
 .bp-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 @media (max-width: 1150px) { .bp-footer-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } .bp-footer-brand { grid-column: 1 / -1; padding-top: 0; } .bp-footer-join { grid-column: span 2; } }
-@media (max-width: 680px) { .bp-footer { padding: 70px 18px 25px; } .bp-footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 12px; } .bp-footer-brand,.bp-footer-join { grid-column: 1 / -1; } .bp-footer-column { padding-left: 12px; } .bp-footer-column h2,.bp-footer-join h2 { font-size: 12px; } .bp-footer-column a { font-size: 12px; } .bp-footer-bottom { font-size: 11px; } .bp-footer-flower-left { font-size: 125px; left: -65px; } }
+@media (max-width: 680px) { .bp-footer-column .bp-footer-shop-links { column-gap: 10px; }  .bp-footer { padding: 70px 18px 25px; } .bp-footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 12px; } .bp-footer-brand,.bp-footer-join { grid-column: 1 / -1; } .bp-footer-column { padding-left: 12px; } .bp-footer-column h2,.bp-footer-join h2 { font-size: 12px; } .bp-footer-column .bp-footer-shop-links { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
+.bp-footer-column a { font-size: 12px; } .bp-footer-bottom { font-size: 11px; } .bp-footer-flower-left { font-size: 125px; left: -65px; } }

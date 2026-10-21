@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import './boompie-footer.css';
+import { JoyClubSignup } from './JoyClubSignup';
 
 type FooterLink = { label: string; href: string };
 const shop: FooterLink[] = [
@@ -22,24 +23,26 @@ const service: FooterLink[] = [
   {label:'Track My Order',href:'/account/orders'},
   {label:'Return Center',href:'/pages/returns'},
   {label:'Contact Us',href:'/pages/contact'},
-  {label:'Size Guide',href:'/pages/size-guide'},
   {label:'Special Offers',href:'/pages/special-offers'},
   {label:'Gift Cards',href:'/collections/gift-cards'},
-  {label:'Store Locator',href:'/pages/locations'},
+  {label:'Size Guide',href:'/pages/size-guide'},
+  {label:'Shipping',href:'/policies/shipping-policy'},
+  {label:'Condition Guide',href:'/pages/product-condition-guide'},
+  {label:'Shopping Help',href:'/pages/shopping-help'},
 ];
 const quick: FooterLink[] = [
   {label:'FAQs',href:'/pages/faqs'},
   {label:'Shipping Policy',href:'/policies/shipping-policy'},
   {label:'Return Policy',href:'/policies/refund-policy'},
   {label:'Privacy Policy',href:'/policies/privacy-policy'},
-  {label:'Terms of Service',href:'/policies/terms-of-service'},
+  {label:'Personal Information Policy',href:'/pages/privacy-choices'},
+    {label:'Terms of Service',href:'/policies/terms-of-service'},
   {label:'Accessibility Statement',href:'/pages/accessibility'},
-  {label:'Do Not Sell or Share My Personal Information',href:'/pages/privacy-choices'},
 ];
-function FooterColumn({title,links}:{title:string;links:FooterLink[]}) {
+function FooterColumn({title,links,twoColumns=false}:{title:string;links:FooterLink[];twoColumns?:boolean}) {
   return <nav className="bp-footer-column" aria-label={title}>
     <h2>{title}</h2>
-    <ul>{links.map(link => <li key={link.label}><Link href={link.href}>{link.label}</Link></li>)}</ul>
+    <ul className={twoColumns ? "bp-footer-shop-links" : undefined}>{links.map(link => <li key={link.label}><Link href={link.href}>{link.label}</Link></li>)}</ul>
   </nav>;
 }
 export function BoompieFooter() {
@@ -56,25 +59,31 @@ export function BoompieFooter() {
             <Image src="/assets/boompie-logo-inverse.png" alt="The Boompie — Great Finds. Great Deals. Greater Joy." width={750} height={284} className="bp-footer-logo" sizes="(max-width: 720px) 260px, 330px" />
           </Link>
         </div>
-        <FooterColumn title="SHOP" links={shop} />
-        <FooterColumn title="CUSTOMER SERVICE" links={service} />
-        <FooterColumn title="QUICK LINKS" links={quick} />
+        <FooterColumn title="SHOP" links={shop} twoColumns />
+        <FooterColumn title="CUSTOMER SERVICE" links={service} twoColumns />
+        <FooterColumn title="ABOUT US" links={quick} />
         <div className="bp-footer-join">
           <h2>JOIN THE JOY CLUB</h2>
           <p>Get first dibs on new drops, exclusive deals, and a little extra joy delivered to your inbox.</p>
-          <form action="/pages/joy-club" method="get" className="bp-footer-signup">
-            <label className="bp-sr-only" htmlFor="bp-footer-email">Email address</label>
-            <input id="bp-footer-email" type="email" name="email" placeholder="Your email address" required autoComplete="email" />
-            <button type="submit">SIGN UP</button>
-          </form>
+          <JoyClubSignup />
           <div className="bp-footer-social" aria-label="Social media">
             <span>FOLLOW THE JOY</span>
-            <Link href="/pages/social" aria-label="Our social channels">◎ &nbsp;♪ &nbsp;♡</Link>
+            <div className="bp-footer-social-links">
+              <Link href="/pages/social" aria-label="The Boompie on Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg>
+              </Link>
+              <Link href="/pages/social" aria-label="The Boompie on Facebook" title="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.9 22v-8.3h2.8l.4-3.3h-3.2V8.3c0-1 .3-1.6 1.7-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.6 0-4.4 1.6-4.4 4.6v2.1H7.5v3.3h2.9V22h3.5Z"/></svg>
+              </Link>
+              <Link href="/pages/social" aria-label="The Boompie on Pinterest" title="Pinterest">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.8 0 1.2.6 1.2 1.4 0 .9-.6 2.2-.9 3.5-.3 1.1.5 2 1.6 2 1.9 0 3.4-2 3.4-4.8 0-2.5-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.5 0 .9.3 1.8.8 2.4l.2.6-.3 1.1c0 .2-.2.3-.5.2-1.3-.6-2.1-2.5-2.1-4.1 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6.1 0 3.7-2.3 6.6-5.4 6.6-1.1 0-2.2-.6-2.6-1.2l-.7 2.6c-.2 1-.9 2.1-1.3 2.9A10 10 0 1 0 12 2Z"/></svg>
+              </Link>
+              <Link href="/pages/social" aria-label="The Boompie on YouTube" title="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.1a2.8 2.8 0 0 0-2-2C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.6.5a2.8 2.8 0 0 0-2 2C2 8.9 2 12 2 12s0 3.1.4 4.9a2.8 2.8 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.8 2.8 0 0 0 2-2c.4-1.8.4-4.9.4-4.9s0-3.1-.4-4.9ZM10 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+              </Link>
+            </div>
           </div>
-          <div className="bp-footer-payments">
-            <h3>WE ACCEPT</h3>
-            <p>Visa &nbsp; · &nbsp; Mastercard &nbsp; · &nbsp; American Express &nbsp; · &nbsp; PayPal &nbsp; · &nbsp; Shop Pay</p>
-          </div>
+          
         </div>
       </div>
       <div className="bp-footer-bottom">

@@ -1,8 +1,8 @@
 
-import Image from "next/image";
-import Link from "next/link";
 import CartModal from "components/cart/modal";
 import { categories, categoryHref } from "lib/boompie/categories";
+import Image from "next/image";
+import Link from "next/link";
 
 type IconName = "search" | "user" | "bag";
 
@@ -58,16 +58,16 @@ export function BoompieHeader() {
         {/* Logo */}
         <Link
           href="/"
-          className="relative z-[60] -mb-6 flex shrink-0 items-center"
+          className="relative z-[60] -translate-y-1 flex shrink-0 items-center"
           aria-label="The Boompie home"
         >
           <Image
   src="/boompie/hero/boompie-logo.png"
   alt="The Boompie — Great Finds. Great Deals. Greater Joy."
-  width={360}
-  height={142}
+  width={210}
+  height={80}
   priority
-  className="h-auto w-[190px] md:w-[300px]"
+  className="h-auto w-[80px] md:w-[210px]"
 />  
         </Link>
 

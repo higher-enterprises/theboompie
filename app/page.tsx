@@ -15,16 +15,20 @@ export default async function HomePage() {
       <section className="-mt-3 md:-mt-4" aria-label="Featured finds">
         <FeaturedFinds products={products} rows={FEATURED_ROWS} />
       </section>
-      <section className="pt-3 md:pt-5" aria-label="New arrivals">
+      <div className="boompie-section-divider" aria-hidden="true" />
+      <section aria-label="New arrivals">
         <NewArrivals />
       </section>
-      <section className="pt-3 md:pt-5" aria-label="Shop the Boompie">
+      <div className="boompie-section-divider" aria-hidden="true" />
+      <section aria-label="Shop the Boompie">
         <HomeMasonry />
       </section>
-      <section className="pt-3 md:pt-5" aria-label="Bargain basement">
+      <div className="boompie-section-divider" aria-hidden="true" />
+      <section aria-label="Bargain basement">
         <BargainBasement />
       </section>
-      <section className="pt-2 md:pt-4">
+      <div className="boompie-section-divider" aria-hidden="true" />
+      <section>
         <HomeValues />
       </section>
     </>
