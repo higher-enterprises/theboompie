@@ -35,7 +35,7 @@ export function FeaturedFinds({ products, rows = 1, durationSeconds = 65 }: Prop
           <span className="bpw-featured-flower" aria-hidden="true">✿</span>
           <div><h2 id="bpw-featured-title">FEATURED FINDS</h2><p>Discover something worth smiling about.</p></div>
         </div>
-        <Link className="bpw-shop-all" href="/search?sort=featured">SHOP ALL FEATURED FINDS <span aria-hidden="true">→</span></Link>
+        <Link className="bpw-shop-all" href="/search?sort=featured/shop/featured-finds">SHOP ALL FEATURED FINDS <span aria-hidden="true">→</span></Link>
       </div>
       <div className="bpw-marquee" role="region" aria-label="Slowly scrolling featured products" tabIndex={0}>
         <div className="bpw-marquee-track" style={{ "--bpw-duration": `${Math.max(25, durationSeconds)}s` } as React.CSSProperties}>
