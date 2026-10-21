@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import './boompie-footer.css';
-import { JoyClubSignup } from './JoyClubSignup';
 
 type FooterLink = { label: string; href: string };
 const shop: FooterLink[] = [
@@ -65,7 +64,18 @@ export function BoompieFooter() {
         <div className="bp-footer-join">
           <h2>JOIN THE JOY CLUB</h2>
           <p>Get first dibs on new drops, exclusive deals, and a little extra joy delivered to your inbox.</p>
-          <JoyClubSignup />
+          <form
+            action="https://theboompie.us7.list-manage.com/subscribe/post?u=ae3483b8337544bb79239ea96&id=d2246758b5&f_id=00efa9e4f0"
+            method="post"
+            className="bp-footer-signup"
+          >
+            <label className="bp-sr-only" htmlFor="bp-footer-email">Email address</label>
+            <input id="bp-footer-email" type="email" name="EMAIL" placeholder="Your email address" required autoComplete="email" />
+            <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+              <input type="text" name="b_ae3483b8337544bb79239ea96_d2246758b5" tabIndex={-1} defaultValue="" />
+            </div>
+            <button type="submit" name="subscribe">SIGN UP</button>
+          </form>
           <div className="bp-footer-social" aria-label="Social media">
             <span>FOLLOW THE JOY</span>
             <div className="bp-footer-social-links">
