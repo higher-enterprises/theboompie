@@ -131,7 +131,7 @@ async function RelatedProducts({ id }: { id: string }) {
                 </div>
                 <div className={`flex min-h-[62px] items-center justify-between gap-2 rounded-t-xl px-3 py-2 ${style.background} ${style.foreground}`}>
                   <div className="min-w-0">
-                    <p className="line-clamp-2 text-xs font-bold leading-tight">{related.title}</p>
+                    <p className="line-clamp-2 text-xs font-bold leading-tight [font-family:var(--font-poppins)]">{related.title}</p>
                     <p className="mt-1 text-xs font-bold">
                       {new Intl.NumberFormat("en-US", {
                         style: "currency",
