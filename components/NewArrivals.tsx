@@ -1,6 +1,9 @@
+import { Titan_One } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import './new-arrivals.css';
+
+const titanOne = Titan_One({ weight: '400', subsets: ['latin'], display: 'swap' });
 
 type Product = { id:string; handle:string; title:string; image?:{url:string;altText:string|null}|null; price:string; currency:string };
 
@@ -40,7 +43,19 @@ function ProductCard({product,large=false,index}:{product:Product;large?:boolean
 export async function NewArrivals(){
   const products=await loadProducts();
   return <section className="bpna-section" aria-labelledby="bpna-title">
-    <div className="bpna-heading"><div className="bpna-heading-copy"><span className="bpna-flower" aria-hidden="true">✿</span><div><h2 id="bpna-title">NEW ARRIVALS</h2><p>Fresh finds. Just in. Don’t miss out!</p></div></div><Link className="bpna-shop-all" href="/shop/new-arrivals">SHOP ALL NEW ARRIVALS <span aria-hidden="true">→</span></Link></div>
-    {products.length ? <div className="bpna-grid">{products.map((p,i)=><ProductCard key={p.id} product={p} index={i} large={i===0}/>)}</div> : <div className="bpna-empty">New finds coming soon!</div>}
+    <div className="bpna-heading"><div className="bpna-heading-copy"><span className="bpna-flower" aria-hidden="true">✿</span><div><h2 id="bpna-title" className={titanOne.className}>NEW ARRIVALS</h2><p>Fresh finds. Just in. Don’t miss out!</p></div></div><Link className="bpna-shop-all" href="/shop/new-arrivals">SHOP ALL NEW ARRIVALS <span aria-hidden="true">→</span></Link></div>
+    {products.length ? <>
+      <div className="bpna-grid bpna-desktop-grid">{products.map((p,i)=><ProductCard key={p.id} product={p} index={i} large={i===0}/>)}</div>
+      <div className="bpna-mobile-list">
+        <ProductCard product={products[0]!} index={0} large />
+        {Array.from({length: Math.ceil((products.length - 1) / 2)}, (_, row) => (
+          <div className="bpna-mobile-row" key={row}>
+            {products.slice(1 + row * 2, 3 + row * 2).map((p, i) => (
+              <ProductCard key={p.id} product={p} index={1 + row * 2 + i} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </> : <div className="bpna-empty">New finds coming soon!</div>}
   </section>;
 }
