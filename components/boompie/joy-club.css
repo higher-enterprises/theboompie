@@ -238,3 +238,13 @@
   .jc-hero-art { height: clamp(320px, 92vw, 420px); }
   .jc-hero-shopper { height: 100%; bottom: -6px; }
 }
+
+/* Mobile: use the original wave silhouette with a pure white fill. */
+@media (max-width: 760px) {
+  .jc-page, .jc-top, .jc-perks { background-color: #ffffff; }
+  .jc-hero::after {
+    background: #ffffff;
+    -webkit-mask: url('/assets/boompie/joyclub/joy-club-wave.svg') center bottom / 100% 100% no-repeat;
+    mask: url('/assets/boompie/joyclub/joy-club-wave.svg') center bottom / 100% 100% no-repeat;
+  }
+}
