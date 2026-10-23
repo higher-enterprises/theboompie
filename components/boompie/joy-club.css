@@ -134,3 +134,50 @@
  .jc-perk-copy h3,.jc-perk-copy p{font-size:10px}
 .jc-signup-heading{font-size:28px}
 }
+
+
+/* Joy Club responsive refinement — applies only to phones/tablets. */
+@media (max-width: 760px) {
+  .jc-page { width: 100%; overflow-x: clip; }
+  .jc-top { display: flex; flex-direction: column; min-width: 0; }
+  .jc-top::before { height: 100%; background-size: auto 470px; background-repeat: no-repeat; background-position: center top; }
+  .jc-top::after { top: 420px; width: 100%; height: 42px; background-size: 100% 100%; }
+  .jc-hero { order: 1; display: flex; flex-direction: column; min-height: 0; }
+  .jc-hero-art { height: clamp(270px, 82vw, 370px); flex: none; }
+  .jc-hero-shopper { height: clamp(325px, 99vw, 440px); left: 50%; bottom: -8px; transform: translateX(-50%); }
+  .jc-hero-copy { padding: 4px 16px 45px; align-items: center; text-align: center; }
+  .jc-hero-title { width: min(65vw, 285px); max-height: none; margin: 0 auto; object-position: center; }
+  .jc-signup { order: 2; margin: 0 14px 28px; padding: 25px 20px 24px; border-radius: 22px; width: auto; align-self: stretch; }
+  .jc-signup-heading { font-size: clamp(26px, 7.2vw, 34px); margin: 0 0 12px; }
+  .jc-signup-intro { font-size: 14px; line-height: 1.55; margin-bottom: 18px; }
+  .jc-signup form { gap: 7px; }
+  .jc-signup form > label:not(.jc-consent), .jc-signup legend { font-size: 13px; }
+  .jc-signup input[type=email], .jc-signup input:not([type]) { height: 46px; font-size: 16px; padding-inline: 13px; }
+  .jc-signup fieldset { margin-top: 10px; }
+  .jc-interests { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .jc-interest { font-size: 12px; min-height: 34px; padding: 7px 8px; white-space: normal; }
+  .jc-consent { font-size: 12px; line-height: 1.45; margin-top: 12px; align-items: flex-start; }
+  .jc-consent input { margin-top: 3px; }
+  .jc-image-button { margin: 5px auto 0; width: min(75%, 250px); }
+  .jc-privacy { font-size: 11px; line-height: 1.4; margin-top: 5px; }
+  .jc-perks { order: 3; padding: 0 18px 44px; }
+  .jc-perks-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+  .jc-perk-item { gap: 10px; }
+  .jc-perk-item .jc-icon { flex: 0 0 62px; width: 62px; height: 62px; }
+  .jc-perk-item .jc-icon svg { width: 32px; height: 32px; }
+  .jc-perk-copy h3 { font-size: 12px; line-height: 1.3; margin-bottom: 6px; }
+  .jc-perk-copy p { font-size: 12px; line-height: 1.45; max-width: 200px; }
+}
+@media (max-width: 520px) {
+  .jc-top::before { height: 100%; background-size: auto 440px; }
+  .jc-top::after { top: 403px; }
+  .jc-hero-art { height: clamp(270px, 80vw, 340px); }
+  .jc-hero-shopper { height: clamp(325px, 99vw, 405px); }
+  .jc-hero-copy { padding-bottom: 42px; }
+  .jc-hero-title { width: min(64vw, 270px); margin: 0 auto; }
+  .jc-signup { margin-inline: 12px; padding: 23px 16px 22px; }
+  .jc-perks { padding-inline: 14px; }
+  .jc-perks-grid { gap: 26px 12px; }
+  .jc-perk-copy h3 { font-size: 11.5px; }
+  .jc-perk-copy p { font-size: 11.5px; }
+}
