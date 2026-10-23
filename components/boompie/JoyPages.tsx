@@ -1,6 +1,6 @@
 'use client';
-import { useState, type FormEvent } from 'react';
 import Link from 'next/link';
+import { useState, type FormEvent } from 'react';
 import './joy-pages.css';
 
 const A='/assets/boompie/community/';
@@ -17,7 +17,7 @@ export function JoyClubPage(){
  <section className="joy-community"><div className="joy-container joy-community-inner"><div><h2>A COMMUNITY THAT <em>CELEBRATES GREAT FINDS.</em></h2><p>Real people. Real finds. Real joy.</p><Link className="joy-btn joy-btn-purple" href="/pages/share-your-joy">REAL PEOPLE. REAL JOY. →</Link></div><div className="joy-photo-row">{polaroid('joy-vinyl.jpg','Classic find! Only $8!')}{polaroid('joy-bag.jpg','Such a good find!')}{polaroid('joy-toy.jpg','So excited!')}</div></div></section><div className="joy-container joy-bottom-icons"><span>◇ NEW ARRIVALS</span><span>♔ MEMBER OFFERS</span><span>♡ STYLE IDEAS</span><span>♧ COMMUNITY SPOTLIGHT</span><span>☆ AND MORE!</span></div></main>
 }
 
-const stories=[['story-jacket.jpg','This jacket makes me feel unstoppable!','Vintage Jacket'],['story-toy.jpg','He found this truck and hasn’t put it down since!','Toys'],['story-vinyl.jpg','My dad had this album. Now I do too.','Music'],['story-lamp.jpg','It was exactly what my living room needed.','Home Decor']];
+const stories: [string, string, string][] = [['story-jacket.jpg','This jacket makes me feel unstoppable!','Vintage Jacket'],['story-toy.jpg','He found this truck and hasn’t put it down since!','Toys'],['story-vinyl.jpg','My dad had this album. Now I do too.','Music'],['story-lamp.jpg','It was exactly what my living room needed.','Home Decor']];
 export function ShareYourJoyPage(){const [story,setStory]=useState('');const [name,setName]=useState('');return <main className="joy-page joy-share"><section className="joy-hero joy-hero-share"><div className="joy-container joy-share-hero-inner"><div><Flower/><h1>SHARE <em>YOUR JOY</em></h1><h3>Every find has a story.</h3><p>From vintage treasures to everyday essentials, our community is full of amazing finds and even better stories. Share yours and inspire someone else.</p><a className="joy-btn" href="#share-story">SHARE YOUR STORY →</a></div><div className="joy-photo-row">{polaroid('story-camera.jpg','This camera started a new hobby!')}{polaroid('story-lamp.jpg','Perfect for my space!')}</div></div></section>
  <section className="joy-container joy-how"><h2>✳ HOW IT WORKS ✳</h2><div className="joy-steps">{[['◎','1. SNAP A PHOTO','Show us your find.'],['☏','2. TELL THE STORY','Why it’s special.'],['↑','3. SUBMIT','It’s quick and easy.'],['♡','4. INSPIRE OTHERS','Your story could be featured on The Boompie!']].map(([icon,title,desc])=><div key={title}><span>{icon}</span><strong>{title}</strong><p>{desc}</p></div>)}</div></section>
  <section className="joy-stories"><div className="joy-container"><h2>✧ LATEST STORIES ✧</h2><div className="joy-story-grid">{stories.map(([file,caption,category])=><article key={file}>{polaroid(file,caption)}<small>{category} · ♥</small></article>)}</div><a href="#share-story" className="joy-btn">SHARE YOUR STORY →</a></div></section>
