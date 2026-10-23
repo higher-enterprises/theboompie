@@ -16,7 +16,7 @@ export default function BoompieMobileNav({ items }: { items: NavItem[] }) {
         aria-expanded={open}
         aria-controls="boompie-mobile-navigation"
         onClick={() => setOpen((value) => !value)}
-        className="flex h-10 w-10 items-center justify-center rounded-lg border-2 border-[#55258a] bg-white text-[#55258a] shadow-sm"
+        className="flex h-10 w-10 items-center justify-center rounded-md border-0 bg-transparent text-[#55258a]"
       >
         {open ? (
           <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" strokeWidth="2.7" strokeLinecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>

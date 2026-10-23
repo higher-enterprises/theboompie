@@ -166,7 +166,7 @@
   .boompie-home-hero__yellow {
     order: 1;
     z-index: 2;
-    margin-top: -76px;
+    margin-top: -115px;
     width: 100%;
     min-height: 290px;
   }
@@ -174,4 +174,22 @@
 
 @media (max-width: 767px) {
   .boompie-home-hero { margin-top: -20px; }
+}
+
+/* More breathing room inside the yellow artwork on mobile. */
+@media (max-width: 767px) {
+  .boompie-home-hero__yellow {
+    display: flex;
+    align-items: center;
+    min-height: 365px;
+    box-sizing: border-box;
+    padding-block: 54px 58px;
+  }
+  .boompie-home-hero__content {
+    position: relative;
+    top: auto;
+    left: 10%;
+    width: 83%;
+    transform: none;
+  }
 }

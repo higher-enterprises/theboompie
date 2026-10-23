@@ -56,12 +56,13 @@ export function BoompieHeader() {
     <header className="relative z-50 w-full bg-[#fffaf0]">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-3 py-2 md:gap-6 md:px-8 md:py-3">
 
-        <BoompieMobileNav items={navigation} />
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
+          <BoompieMobileNav items={navigation} />
 
-        {/* Logo */}
+          {/* Logo */}
         <Link
           href="/"
-          className="relative z-[60] -translate-y-1 flex shrink-0 items-center"
+          className="relative z-[60] flex shrink-0 items-center"
           aria-label="The Boompie home"
         >
           <Image
@@ -73,6 +74,8 @@ export function BoompieHeader() {
   className="h-auto w-[125px] sm:w-[145px] md:w-[210px]"
 />  
         </Link>
+
+        </div>
 
         {/* Main navigation */}
         <nav
@@ -91,7 +94,7 @@ export function BoompieHeader() {
         </nav>
 
         {/* Header tools */}
-        <div className="flex shrink-0 items-center gap-2 sm:gap-4 md:gap-5">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-4 md:ml-0 md:gap-5">
           <Link href="/search" aria-label="Search">
             <Icon name="search" />
           </Link>
