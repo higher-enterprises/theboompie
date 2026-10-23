@@ -193,3 +193,23 @@
     transform: none;
   }
 }
+
+/* Mobile: let the yellow artwork extend beyond both screen edges.
+   Keep its content aligned to the visible viewport. */
+@media (max-width: 767px) {
+  .boompie-home-hero {
+    overflow: hidden;
+  }
+
+  .boompie-home-hero__yellow {
+    width: 124%;
+    margin-left: -12%;
+    margin-right: -12%;
+    background-size: 100% 100%;
+  }
+
+  .boompie-home-hero__content {
+    left: 17.75%;
+    width: 67%;
+  }
+}
