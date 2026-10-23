@@ -239,12 +239,11 @@
   .jc-hero-shopper { height: 100%; bottom: -6px; }
 }
 
-/* Mobile: use the original wave silhouette with a pure white fill. */
+/* White lower-page backing: retain the original wave artwork unchanged. */
 @media (max-width: 760px) {
-  .jc-page, .jc-top, .jc-perks { background-color: #ffffff; }
-  .jc-hero::after {
-    background: #ffffff;
-    -webkit-mask: url('/assets/boompie/joyclub/joy-club-wave.svg') center bottom / 100% 100% no-repeat;
-    mask: url('/assets/boompie/joyclub/joy-club-wave.svg') center bottom / 100% 100% no-repeat;
-  }
+  .jc-page { background-color: #fff !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+  .jc-top { background-color: #fff !important; }
+  .jc-perks { background-color: #fff !important; margin-bottom: 0 !important; }
+  /* Extend the white background across any bottom gap from the page wrapper. */
+  .jc-page::after { content: ''; display: block; height: 32px; background: #fff; margin-bottom: -32px; pointer-events: none; }
 }
