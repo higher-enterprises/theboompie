@@ -1,0 +1,91 @@
+.jc-page{--purple:#37108b;--pink:#ff078e;--cream:#fffcf3;color:var(--purple);background:var(--cream);font-family:var(--font-poppins),Poppins,Arial,sans-serif;overflow:hidden}.jc-page *{box-sizing:border-box}.jc-page img{display:block;max-width:100%}.jc-top{display:grid;grid-template-columns:minmax(0,65%) minmax(320px,35%);grid-template-rows:auto auto;background:linear-gradient(to bottom,#fbd5eb 0,#fbd5eb 51%,var(--cream) 51%,var(--cream) 100%);position:relative}.jc-hero{grid-column:1;grid-row:1;display:grid;grid-template-columns:53% 47%;min-height:420px;background:#fbd4e9;overflow:hidden}.jc-hero-art{position:relative;min-width:0;overflow:hidden}.jc-hero-art img{height:100%;width:100%;object-fit:cover;object-position:22% center}.jc-hero-copy{padding:15px 24px 30px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}.jc-hero-title{width:min(100%,330px);max-height:255px;object-fit:contain;object-position:left center;margin:0 0 10px}.jc-hero-copy h1{font-size:clamp(18px,1.8vw,27px);font-weight:800;line-height:1.15;margin:0 0 12px}.jc-hero-copy p{font-size:clamp(11px,1.02vw,15px);line-height:1.55;margin:0;max-width:390px}.jc-signup{grid-column:2;grid-row:1 / span 2;align-self:start;z-index:3;margin:24px 22px 30px 0;background:#ffeaf6;border-radius:24px;padding:20px 25px 26px;box-shadow:0 10px 30px #6c145312}.jc-signup-heading{width:min(100%,360px);height:76px;object-fit:contain;margin:0 auto 4px}.jc-signup form{display:flex;flex-direction:column;gap:7px}.jc-signup form>label:not(.jc-consent){font-size:12px;font-weight:700;margin-top:8px}.jc-signup label span{color:var(--pink)}.jc-signup input[type=email],.jc-signup input:not([type]){width:100%;border:1px solid #d5cbe5;background:white;border-radius:6px;height:41px;padding:0 13px;font-size:12px;color:var(--purple)}.jc-signup fieldset{border:0;padding:0;margin:9px 0 0}.jc-signup legend{font-size:12px;font-weight:700;margin-bottom:9px}.jc-interests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.jc-interest{display:flex;align-items:center;gap:5px;background:white;border-radius:5px;padding:6px 4px;font-size:10px;white-space:nowrap}.jc-interest input,.jc-consent input{accent-color:var(--pink);margin:0;flex-shrink:0}.jc-consent{display:flex;align-items:center;gap:8px;font-size:10px;margin:12px 0 0}.jc-image-button{border:0;padding:0;background:transparent;cursor:pointer;position:relative;margin-top:6px;width:100%}.jc-image-button img{width:100%;height:auto}.jc-image-button:focus-visible,.jc-community-link:focus-visible{outline:3px solid #ffcc00;outline-offset:3px}.jc-image-button:disabled{opacity:.7;cursor:wait}.jc-button-loading{position:absolute;inset:0;display:grid;place-items:center;background:#fa0b90;color:white;border-radius:50px;font-weight:800}.jc-privacy{font-size:10px;text-align:center;margin:0}.jc-form-status{font-size:12px;font-weight:700;text-align:center;margin:5px 0 0}.jc-perks{grid-column:1;grid-row:2;min-height:300px;padding:0 24px 40px;background:var(--cream)}.jc-image-heading{margin:0;line-height:0}.jc-perks>.jc-image-heading{max-width:440px;margin:-10px auto 6px;position:relative;z-index:2}.jc-perks>.jc-image-heading img{width:100%}.jc-perks-grid,.jc-why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;text-align:center}.jc-benefit{display:flex;flex-direction:column;align-items:center}.jc-icon{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px;color:var(--purple)}.jc-icon svg{width:38px;height:38px}.jc-hot{background:#ff078e;color:white}.jc-yellow{background:#ffd400}.jc-lavender{background:#dec0ff}.jc-pink{background:#f6bde9}.jc-benefit h3{font-weight:900;font-size:clamp(11px,1.05vw,15px);line-height:1.15;margin:0 0 7px;max-width:155px}.jc-benefit p{font-size:clamp(10px,.94vw,13px);line-height:1.3;margin:0;max-width:160px}.jc-community{min-height:360px;background:linear-gradient(125deg,#ffe3f4,#ffd4ec 65%,#fbe0f4);display:grid;grid-template-columns:32% 68%;align-items:center;padding:28px 20px 30px;position:relative}.jc-community:before,.jc-community:after{content:'';position:absolute;left:0;right:0;height:25px;background:var(--cream);clip-path:polygon(0 0,10% 30%,20% 0,30% 65%,40% 5%,50% 40%,60% 0,70% 60%,80% 10%,90% 55%,100% 0,100% 0);pointer-events:none}.jc-community:before{top:-1px}.jc-community:after{bottom:-1px;transform:rotate(180deg)}.jc-community-content{position:relative;z-index:1;padding:12px 0 12px 6px}.jc-community-content .jc-image-heading{max-width:390px;margin-bottom:6px}.jc-community-content .jc-image-heading img{width:100%}.jc-community-content>p{font-size:clamp(11px,1.05vw,14px);line-height:1.5;max-width:330px;margin:0 0 12px}.jc-community-link{display:block;width:min(100%,260px)}.jc-community-link img{width:100%}.jc-polaroids{display:flex;align-items:center;justify-content:center;padding:20px 5px 25px;min-width:0}.jc-polaroid{width:21%;flex:0 0 21%;margin-left:-1.2%;filter:drop-shadow(0 9px 9px #5b1c5a40);transition:transform .2s;position:relative}.jc-polaroid:first-child{margin-left:0}.jc-polaroid img{width:100%;height:auto}.jc-polaroid-1{transform:rotate(-9deg) translateY(8px);z-index:1}.jc-polaroid-2{transform:rotate(6deg) translateY(-5px);z-index:2}.jc-polaroid-3{transform:rotate(-5deg) translateY(5px);z-index:3}.jc-polaroid-4{transform:rotate(7deg) translateY(-4px);z-index:4}.jc-polaroid-5{transform:rotate(-8deg) translateY(5px);z-index:5}.jc-polaroid:hover{transform:rotate(0deg) translateY(-14px);z-index:6}.jc-why{padding:0 32px 72px;min-height:250px;background:var(--cream)}.jc-why>.jc-image-heading{width:min(100%,350px);margin:0 auto 2px}.jc-why>.jc-image-heading img{width:100%}.jc-why-grid{grid-template-columns:repeat(5,minmax(0,1fr));max-width:1200px;margin:0 auto}.jc-why .jc-icon{width:75px;height:75px}.jc-why .jc-benefit h3{max-width:none}
+@media(max-width:1050px){.jc-top{grid-template-columns:minmax(0,62%) minmax(310px,38%)}.jc-hero{min-height:360px}.jc-hero-copy{padding-right:10px}.jc-signup{padding:15px;margin-right:12px}.jc-interests{grid-template-columns:repeat(2,1fr)}.jc-community{grid-template-columns:34% 66%}.jc-icon{width:65px;height:65px}.jc-icon svg{width:32px;height:32px}}
+@media(max-width:760px){.jc-top{display:flex;flex-direction:column;background:var(--cream)}.jc-hero{min-height:330px;grid-template-columns:50% 50%}.jc-hero-title{max-height:190px}.jc-hero-copy{padding:12px}.jc-hero-copy h1{font-size:19px}.jc-hero-copy p{font-size:11px}.jc-signup{order:2;margin:-10px 16px 20px;align-self:stretch}.jc-perks{order:3;padding:0 16px 38px}.jc-perks>.jc-image-heading{max-width:360px}.jc-community{grid-template-columns:1fr;padding:30px 20px}.jc-community-content{max-width:420px;margin:auto;text-align:center}.jc-community-content .jc-image-heading,.jc-community-link{margin-left:auto;margin-right:auto}.jc-polaroids{padding:25px 0}.jc-why{padding:0 16px 60px}.jc-why-grid{gap:15px}.jc-why .jc-icon{width:60px;height:60px}.jc-why .jc-icon svg{width:28px;height:28px}}
+@media(max-width:520px){.jc-hero{grid-template-columns:1fr;min-height:0}.jc-hero-art{height:285px}.jc-hero-art img{object-position:center 38%}.jc-hero-copy{padding:0 20px 24px;align-items:center;text-align:center}.jc-hero-title{width:230px;margin-top:-8px}.jc-hero-copy p{font-size:12px}.jc-perks-grid{grid-template-columns:repeat(2,1fr);gap:25px 12px}.jc-why-grid{grid-template-columns:repeat(2,1fr);gap:22px}.jc-why-grid .jc-benefit:last-child{grid-column:1 / -1}.jc-polaroids{justify-content:flex-start;overflow-x:auto;padding:25px 8px}.jc-polaroid{flex-basis:35%;width:35%}.jc-community{overflow:hidden}.jc-signup-heading{height:70px}}
+
+
+/* JOY CLUB HERO — single continuous background across BOTH columns.
+   Shopper and title are separate transparent foreground assets. */
+@media (min-width:761px) {
+ .jc-page {overflow:visible;position:relative;z-index:20}
+ .jc-top {
+   isolation:isolate;
+   position:relative;
+   grid-template-columns:minmax(0,65%) minmax(320px,35%);
+   grid-template-rows:470px 205px;
+   background:var(--cream);
+ }
+ .jc-top::before {
+   content:"";position:absolute;left:0;right:0;top:0;height:470px;
+   background-image:url('/assets/boompie/joyclub/joy-club-background-full.webp');
+   background-size:100% 100%;background-position:center top;background-repeat:no-repeat;
+   z-index:-1;pointer-events:none;
+ }
+ .jc-top::after {
+   content:"";position:absolute;left:0;right:0;top:420px;height:51px;
+   background:url('/assets/boompie/joyclub/joy-club-wave.svg') center bottom / 100% 100% no-repeat;
+   z-index:2;pointer-events:none;
+ }
+ .jc-hero {
+   position:relative;grid-column:1;grid-row:1;
+   height:470px;min-height:470px;overflow:visible;
+   background:transparent;grid-template-columns:54% 46%;isolation:auto;
+ }
+ .jc-hero-art {position:relative;overflow:visible;z-index:1;pointer-events:none}
+ .jc-hero-art .jc-hero-shopper {
+   position:absolute;display:block;
+   height:calc(100% + 12px);width:auto;max-width:none;max-height:none;
+   left:-3%;bottom:-2px;top:auto;object-fit:contain;object-position:bottom left;
+   transform:none;z-index:1;
+ }
+ .jc-bag-foreground {
+   position:absolute;z-index:5;pointer-events:none;max-width:none!important;
+   height:calc(100% + 12px);width:auto;left:calc(-3%);bottom:-2px;
+   /* Only the tote is visible in this top layer, so her lower body stays behind the wave. */
+   clip-path:polygon(0% 33%,42% 33%,45% 95%,0% 100%);
+ }
+ .jc-hero-copy {
+   position:relative;z-index:3;display:flex;flex-direction:column;
+   justify-content:center;align-items:flex-start;text-align:left;
+   padding:12px 32px 32px 12px;
+ }
+ .jc-hero-title {width:min(100%,370px);height:auto;max-height:250px;object-fit:contain;object-position:left center;margin:0 0 10px}
+ .jc-hero-copy h1 {font-size:clamp(22px,2.05vw,34px);margin:0 0 12px;line-height:1.12}
+ .jc-hero-copy p {font-size:clamp(12px,1.04vw,16px);line-height:1.48;max-width:420px;margin:0}
+ .jc-signup {
+   position:relative;z-index:6;grid-column:2;grid-row:1 / span 2;
+   align-self:start;margin:17px 22px 0 0;padding:14px 25px 18px;
+   border-radius:25px;background:#ffeaf6;box-shadow:0 9px 24px #45104e12;
+ }
+ .jc-signup-heading {width:min(100%,440px);height:102px;margin:0 auto -4px;object-fit:contain}
+ .jc-signup form {gap:4px}
+ .jc-signup form>label:not(.jc-consent) {margin-top:5px}
+ .jc-signup input[type=email],.jc-signup input:not([type]) {height:39px}
+ .jc-signup fieldset {margin-top:5px}
+ .jc-signup legend {margin-bottom:5px}
+ .jc-interest {padding:4px}
+ .jc-consent {margin-top:7px}
+ .jc-image-button {width:67%;align-self:center;margin:4px auto 0}
+ .jc-perks {position:relative;z-index:3;grid-column:1;grid-row:2;min-height:205px;padding:0 20px 20px}
+ .jc-perks>.jc-image-heading {max-width:310px;margin:0 auto 7px}
+ .jc-perks-grid {gap:12px}
+ .jc-perks .jc-icon {width:64px;height:64px;margin-bottom:6px}
+ .jc-perks .jc-icon svg {width:31px;height:31px}
+}
+@media(min-width:761px) and (max-width:1150px) {
+ .jc-hero {grid-template-columns:52% 48%}
+ .jc-hero-art .jc-hero-shopper,.jc-bag-foreground {height:calc(100% + 8px)}
+ .jc-hero-copy {padding-right:12px}
+ .jc-hero-title {width:min(100%,310px)}
+ .jc-signup {padding-left:16px;padding-right:16px}
+ .jc-image-button {width:76%}
+}
+@media(max-width:760px) {
+ .jc-top {background:var(--cream)}
+ .jc-hero {position:relative;overflow:hidden;background:url('/assets/boompie/joyclub/joy-club-background-full.webp') center / cover no-repeat}
+ .jc-hero-art {position:relative;overflow:visible}
+ .jc-hero-art .jc-hero-shopper {width:110%;height:100%;max-width:none;object-fit:contain;object-position:bottom left}
+ .jc-bag-foreground {display:none}
+ .jc-hero-copy {position:relative;z-index:2}
+ .jc-hero-title {width:min(100%,260px);height:auto}
+}

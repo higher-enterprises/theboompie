@@ -1,0 +1,3 @@
+/* Import in your global stylesheet or paste into globals.css. */
+/* Applies to the existing Boompie site header only; adapt selector to your header class if needed. */
+header:has(nav) { background-color: #ffdb35 !important; }

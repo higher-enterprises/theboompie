@@ -27,3 +27,11 @@
 /* Use the same 1440px content frame and 3% gutters as masonry. */
 .bpna-section { width:100%; max-width:1440px; padding-inline:3%; box-sizing:border-box; margin:34px auto 30px; }
 @media(max-width:550px){.bpna-section{padding-inline:12px}}
+
+/* Prevent implicit equal-height grid rows from creating large empty bands on mobile. */
+@media (max-width: 600px) {
+  .bpna-grid { grid-template-rows: none; grid-auto-rows: auto; align-content: start; row-gap: 10px; column-gap: 10px; }
+  .bpna-large { grid-row: auto !important; }
+  .bpna-large .bpna-photo { flex: none; min-height: 0; aspect-ratio: 1.4; }
+  .bpna-product { align-self: start; }
+}

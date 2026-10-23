@@ -1,0 +1,33 @@
+/* Load AFTER joy-club-exact.css. The full-width watercolor is a single layer. */
+.jc-page {overflow:visible}
+.jc-top {position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,65%) minmax(0,35%);grid-template-rows:480px 175px;background:#fffcf3;overflow:visible}
+.jc-top::before {content:"";position:absolute;inset:0 0 auto;height:500px;background:#f7b8dd url('/assets/boompie/joyclub/joy-club-store-background.png') center top / 100% 100% no-repeat;z-index:-1;pointer-events:none}
+.jc-hero {grid-column:1;grid-row:1;display:grid;grid-template-columns:53% 47%;position:relative;isolation:auto;min-height:0;background:transparent;overflow:visible}
+/* Hide any redundant in-hero background IMG; full-width background lives on jc-top. */
+.jc-hero-store-background {display:none!important}
+.jc-hero-art {position:relative;z-index:4;overflow:visible}
+.jc-hero-art .jc-hero-shopper {position:absolute;display:block;left:1%;bottom:-13px;top:auto;width:auto;height:calc(100% + 45px);max-height:none;max-width:none;object-fit:contain;object-position:bottom left;transform:none;filter:none;pointer-events:none}
+.jc-hero-copy {z-index:5;display:flex;flex-direction:column;align-items:flex-start;text-align:left;justify-content:center;padding:10px 18px 25px 10px;background:transparent}
+.jc-hero-title {width:min(100%,345px);max-height:215px;object-fit:contain;object-position:left center;margin:0 0 12px}
+.jc-hero-copy h1 {width:100%;font-size:clamp(19px,1.8vw,29px);line-height:1.18;margin:0 0 13px;text-align:left}
+.jc-hero-copy p {font-size:clamp(12px,1.05vw,16px);line-height:1.55;margin:0;max-width:395px;text-align:left}
+.jc-signup {grid-column:2;grid-row:1 / span 2;position:relative;z-index:6;align-self:start;margin:18px 22px 0 0;background:#ffebf7;border-radius:26px;padding:15px 24px 20px;box-shadow:0 8px 28px #6c14530b}
+.jc-signup-heading {width:min(100%,390px);height:95px;object-fit:contain;margin:0 auto 0}
+.jc-signup form {gap:5px}
+.jc-signup form>label:not(.jc-consent){margin-top:6px}
+.jc-signup input[type=email],.jc-signup input:not([type]) {height:41px}
+.jc-signup fieldset {margin-top:7px}
+.jc-consent {margin-top:7px}
+.jc-image-button {width:70%;align-self:center;margin:10px auto 0}
+.jc-privacy {margin-top:2px}
+.jc-perks {grid-column:1;grid-row:2;position:relative;z-index:3;min-height:0;padding:0 20px 15px;background:transparent}
+.jc-perks>.jc-image-heading {width:260px;max-width:45%;margin:0 auto 6px}
+.jc-perks-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:start;text-align:left}
+.jc-perks-grid .jc-benefit {display:grid;grid-template-columns:64px minmax(0,1fr);grid-template-rows:auto auto;column-gap:10px;align-items:center;justify-items:start;text-align:left}
+.jc-perks-grid .jc-icon {grid-row:1 / span 2;grid-column:1;width:60px;height:60px;margin:0}
+.jc-perks-grid .jc-icon svg {width:30px;height:30px}
+.jc-perks-grid .jc-benefit h3 {grid-column:2;grid-row:1;max-width:none;font-size:clamp(10px,.78vw,13px);margin:0 0 4px;line-height:1.2}
+.jc-perks-grid .jc-benefit p {grid-column:2;grid-row:2;max-width:none;font-size:clamp(10px,.75vw,12px);margin:0;line-height:1.3}
+@media(max-width:1100px) and (min-width:761px){.jc-top{grid-template-columns:62% 38%;grid-template-rows:455px 185px}.jc-hero{grid-template-columns:51% 49%}.jc-hero-art .jc-hero-shopper{height:calc(100% + 25px)}.jc-perks-grid .jc-benefit{grid-template-columns:48px 1fr;gap:5px}.jc-perks-grid .jc-icon{width:45px;height:45px}}
+@media(max-width:760px){.jc-top{display:flex;flex-direction:column;background:#fffcf3}.jc-top::before{height:470px;background-size:auto 100%;background-position:left top}.jc-hero{display:grid;grid-template-columns:49% 51%;min-height:430px}.jc-hero-art .jc-hero-shopper{height:100%;left:0;bottom:0}.jc-hero-copy{padding:15px 12px}.jc-hero-title{max-height:170px}.jc-signup{align-self:stretch;margin:0 16px 20px}.jc-perks{padding:0 16px 30px}.jc-perks-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.jc-perks>.jc-image-heading{max-width:320px;width:70%}}
+@media(max-width:520px){.jc-top::before{height:400px}.jc-hero{grid-template-columns:1fr;min-height:0}.jc-hero-art{height:330px}.jc-hero-art .jc-hero-shopper{height:100%;bottom:0;left:0}.jc-hero-copy{align-items:center;text-align:center;padding:12px 20px 25px}.jc-hero-copy h1,.jc-hero-copy p{text-align:center}.jc-hero-title{margin:0 auto 10px}.jc-perks-grid .jc-benefit{grid-template-columns:50px 1fr}.jc-perks-grid .jc-icon{width:48px;height:48px}}

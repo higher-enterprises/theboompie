@@ -1,0 +1,136 @@
+.jc-page{--purple:#37108b;--pink:#ff078e;--cream:#fffcf3;color:var(--purple);background:var(--cream);font-family:var(--font-poppins),Poppins,Arial,sans-serif;overflow:visible;position:relative;z-index:1000}.jc-page *{box-sizing:border-box}.jc-page img{display:block;max-width:100%}
+/* Layout: one continuous artwork across the hero and signup columns. */
+.jc-top {
+  display:grid;grid-template-columns:minmax(0,65%) minmax(320px,35%);
+  grid-template-rows:420px 390px;position:relative;isolation:isolate;
+  background:var(--cream);
+}
+.jc-top::before {
+  content:"";position:absolute;inset:0 0 auto;height:420px;
+  background:#f9cce6 url('/assets/boompie/joyclub/joy-club-store-background.png') center top / 100% 100% no-repeat;
+  z-index:0;pointer-events:none;
+}
+/* Continuous smooth wave across the FULL viewport, behind the signup card. */
+.jc-top::after {
+  content:"";position:absolute;top:385px;left:0;width:65%;height:55px;
+  background-image:url('/assets/boompie/joyclub/joy-club-wave.svg');background-position:center bottom;background-size:100% 100%;background-repeat:no-repeat;
+  pointer-events:none;z-index:9;
+}
+.jc-hero {
+  grid-column:1;grid-row:1;position:relative;z-index:4;display:grid;
+  grid-template-columns:54% 46%;min-width:0;min-height:0;
+  background:transparent;overflow:visible;
+}
+.jc-hero-art {position:relative;min-width:0;pointer-events:none;z-index:8;overflow:visible}
+.jc-hero-shopper {
+  position:absolute;bottom:-20px;left:-12px;height:465px;
+  width:auto;max-width:none!important;object-fit:contain;object-position:bottom left;
+}
+.jc-hero-copy {
+  position:relative;z-index:5;display:flex;flex-direction:column;
+  justify-content:center;align-items:flex-start;text-align:left;
+  padding:5px 24px 38px 8px;min-width:0;
+}
+.jc-hero-title {
+  width:min(100%,340px);height:auto;max-height:210px;
+  object-fit:contain;object-position:left center;margin:0 0 10px;
+}
+.jc-hero-copy h1 {font-size:clamp(18px,1.5vw,25px);font-weight:800;line-height:1.16;margin:0 0 10px}
+.jc-hero-copy p {font-size:clamp(12px,1.02vw,16px);line-height:1.48;margin:0;max-width:420px}
+.jc-signup {
+  grid-column:2;grid-row:1 / span 2;align-self:start;position:relative;z-index:5;
+  margin:18px 22px 0 0;padding:14px 25px 20px;
+  background:#ffeaf6;border-radius:25px;box-shadow:0 9px 24px #45104e12;
+}
+.jc-signup-heading {font-family:var(--font-poppins),Poppins,Arial,sans-serif;font-size:clamp(26px,2.3vw,38px);font-weight:900;line-height:1.1;text-align:center;color:var(--purple);margin:10px auto 10px;letter-spacing:-.035em}
+.jc-signup-intro {font-size:13px;line-height:1.45;text-align:center;margin:0 auto 16px;max-width:360px}
+.jc-visually-hidden {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.jc-signup form {display:flex;flex-direction:column;gap:4px}
+.jc-signup form>label:not(.jc-consent) {font-size:12px;font-weight:700;margin-top:5px}
+.jc-signup label span {color:var(--pink)}
+.jc-signup input[type=email],.jc-signup input:not([type]) {
+  width:100%;border:1px solid #d5cbe5;background:white;border-radius:6px;
+  height:39px;padding:0 13px;font-size:12px;color:var(--purple);
+}
+.jc-signup fieldset {border:0;padding:0;margin:5px 0 0}
+.jc-signup legend {font-size:12px;font-weight:700;margin-bottom:5px}
+.jc-interests {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.jc-interest {display:flex;align-items:center;gap:5px;background:white;border-radius:5px;padding:4px;font-size:10px;white-space:nowrap}
+.jc-interest input,.jc-consent input {accent-color:var(--pink);margin:0;flex-shrink:0}
+.jc-consent {display:flex;align-items:center;gap:8px;font-size:10px;margin:7px 0 0}
+.jc-image-button {border:0;padding:0;background:transparent;cursor:pointer;position:relative;margin:-22px auto 0;width:67%;align-self:center}
+.jc-image-button img {width:100%;height:auto}
+.jc-image-button:focus-visible {outline:3px solid #ffcc00;outline-offset:3px}
+.jc-image-button:disabled {opacity:.7;cursor:wait}
+.jc-button-loading {position:absolute;inset:0;display:grid;place-items:center;background:#fa0b90;color:white;border-radius:50px;font-weight:800}
+.jc-privacy {font-size:10px;text-align:center;margin:0}
+.jc-form-status {font-size:12px;font-weight:700;text-align:center;margin:5px 0 0}
+/* Perks stay in row two, ABOVE the fold, with bottom breathing room. */
+.jc-perks {
+  grid-column:1;grid-row:2;position:relative;z-index:5;
+  min-width:0;background:transparent;padding:30px 25px 55px;
+}
+.jc-image-heading {margin:0;line-height:0}
+.jc-perks>.jc-image-heading {width:min(100%,270px);margin:0 auto 6px;position:relative;z-index:10}
+.jc-perks>.jc-image-heading img {width:100%;height:auto}
+.jc-perks-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:24px 12px;text-align:center;}
+.jc-benefit {display:flex;flex-direction:column;align-items:center}
+.jc-perk-item {flex-direction:column;align-items:center;gap:8px;min-width:0}
+.jc-icon {width:78px;height:78px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px;color:var(--purple)}
+.jc-icon svg {width:38px;height:38px}
+.jc-perk-item .jc-icon {flex:0 0 64px;width:64px;height:64px;margin:0}
+.jc-perk-item .jc-icon svg {width:31px;height:31px}
+.jc-perk-copy {flex:1;min-width:0;padding-top:0;text-align:center}
+.jc-hot {background:#ff078e;color:var(--purple)}
+.jc-yellow {background:#ffd400}
+.jc-lavender {background:#c9a0ff}
+.jc-pink {background:#ffb1dc}
+.jc-green {background:#a9e56d}
+.jc-blue {background:#83d9f5}
+.jc-orange {background:#ffad70}
+.jc-mint {background:#8de0cd}
+.jc-benefit h3 {font-weight:900;font-size:clamp(11px,1.05vw,15px);line-height:1.15;margin:0 0 7px;max-width:155px}
+.jc-benefit p {font-size:clamp(10px,.94vw,13px);line-height:1.3;margin:0;max-width:160px}
+.jc-perk-copy h3 {max-width:none;font-size:clamp(10px,.9vw,13px);margin:0 0 5px}
+.jc-perk-copy p {max-width:180px;margin:0 auto;font-size:clamp(10px,.8vw,12px);line-height:1.35}
+@media(max-width:1050px){
+ .jc-top{grid-template-columns:minmax(0,62%) minmax(310px,38%)}
+ .jc-hero{grid-template-columns:52% 48%}
+ .jc-hero-copy{padding-right:12px}
+ .jc-signup{padding-left:16px;padding-right:16px;margin-right:12px}
+ .jc-interests{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .jc-perk-item{gap:8px}
+ .jc-perk-item .jc-icon{flex-basis:56px;width:56px;height:56px}
+ .jc-perk-item .jc-icon svg{width:27px;height:27px}
+}
+@media(max-width:760px){
+ .jc-top{display:flex;flex-direction:column;background:var(--cream)}
+ .jc-top::before{height:340px;background-size:cover}
+ .jc-top::after{top:306px;width:100%}
+ .jc-hero{min-height:340px;grid-template-columns:50% 50%}
+ .jc-hero-shopper{height:340px;bottom:-12px;left:-12px}
+ .jc-bag-foreground{display:none}
+ .jc-hero-copy{padding:12px;z-index:3}
+ .jc-hero-title{max-height:185px}
+ .jc-hero-copy h1{font-size:19px}
+ .jc-hero-copy p{font-size:11px}
+ .jc-signup{order:2;margin:12px 16px 20px;align-self:stretch}
+ .jc-perks{order:3;padding:0 16px 38px}
+ .jc-perks-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+}
+@media(max-width:520px){
+ .jc-hero{grid-template-columns:1fr;min-height:0}
+ .jc-top::before{height:470px}
+ .jc-top::after{top:436px;width:100%}
+ .jc-hero-art{height:275px}
+ .jc-hero-shopper{height:340px;bottom:-12px;left:-12px}
+ .jc-hero-copy{padding:0 20px 26px;align-items:center;text-align:center}
+ .jc-hero-title{width:230px;margin-top:-8px}
+ .jc-hero-copy p{font-size:12px}
+ .jc-perks-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}
+ .jc-perk-item{gap:8px}
+ .jc-perk-item .jc-icon{flex-basis:46px;width:46px;height:46px}
+ .jc-perk-item .jc-icon svg{width:25px;height:25px}
+ .jc-perk-copy h3,.jc-perk-copy p{font-size:10px}
+.jc-signup-heading{font-size:28px}
+}

@@ -5,9 +5,9 @@ import './boompie-footer.css';
 type FooterLink = { label: string; href: string };
 const shop: FooterLink[] = [
   {label:'New Arrivals',href:'/search?sort=latest-desc'},
-  {label:'Women',href:'/shop/women'},
-  {label:'Men',href:'/shop/men'},
-  {label:'Kids',href:'/shop/kids'},
+  {label:'Clothing',href:'/shop/clothing'},
+  {label:'Shoes',href:'/shop/shoes'},
+  {label:'Jewelry',href:'/shop/jewelry'},
   {label:'Decor',href:'/shop/decor'},
   {label:'Games',href:'/shop/games'},
   {label:'Toys',href:'/shop/toys'},
@@ -20,23 +20,23 @@ const shop: FooterLink[] = [
 const service: FooterLink[] = [
   {label:'My Account',href:'/account'},
   {label:'Track My Order',href:'/account/orders'},
-  {label:'Return Center',href:'/pages/returns'},
-  {label:'Contact Us',href:'/pages/contact'},
-  {label:'Special Offers',href:'/pages/special-offers'},
-  {label:'Gift Cards',href:'/collections/gift-cards'},
-  {label:'Size Guide',href:'/pages/size-guide'},
+  {label:'Return Center',href:'/returns'},
+  {label:'Contact Us',href:'/contact'},
+  {label:'Special Offers',href:'/special-offers'},
+  {label:'Gift Cards',href:'/gift-cards'},
+  {label:'Size Guide',href:'/size-guide'},
   {label:'Shipping',href:'/policies/shipping-policy'},
-  {label:'Condition Guide',href:'/pages/product-condition-guide'},
-  {label:'Shopping Help',href:'/pages/shopping-help'},
+  {label:'Condition Guide',href:'/product-condition-guide'},
+  {label:'Shopping Help',href:'/shopping-help'},
 ];
 const quick: FooterLink[] = [
-  {label:'FAQs',href:'/pages/faqs'},
+  {label:'FAQs',href:'/faqs'},
   {label:'Shipping Policy',href:'/policies/shipping-policy'},
   {label:'Return Policy',href:'/policies/refund-policy'},
   {label:'Privacy Policy',href:'/policies/privacy-policy'},
-  {label:'Personal Information Policy',href:'/pages/privacy-choices'},
+  {label:'Personal Information Policy',href:'/privacy-choices'},
     {label:'Terms of Service',href:'/policies/terms-of-service'},
-  {label:'Accessibility Statement',href:'/pages/accessibility'},
+  {label:'Accessibility Statement',href:'/accessibility'},
 ];
 function FooterColumn({title,links,twoColumns=false}:{title:string;links:FooterLink[];twoColumns?:boolean}) {
   return <nav className="bp-footer-column" aria-label={title}>
@@ -64,32 +64,40 @@ export function BoompieFooter() {
         <div className="bp-footer-join">
           <h2>JOIN THE JOY CLUB</h2>
           <p>Get first dibs on new drops, exclusive deals, and a little extra joy delivered to your inbox.</p>
-          <form
-            action="https://theboompie.us7.list-manage.com/subscribe/post?u=ae3483b8337544bb79239ea96&id=d2246758b5&f_id=00efa9e4f0"
-            method="post"
-            className="bp-footer-signup"
+          <Link
+            href="/joy-club"
+            className="bp-footer-joy-button"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              minHeight: '48px',
+              padding: '12px 24px',
+              backgroundColor: '#ec4899',
+              color: '#ffffff',
+              borderRadius: '8px',
+              fontWeight: 700,
+              textDecoration: 'none',
+              textAlign: 'center',
+            }}
           >
-            <label className="bp-sr-only" htmlFor="bp-footer-email">Email address</label>
-            <input id="bp-footer-email" type="email" name="EMAIL" placeholder="Your email address" required autoComplete="email" />
-            <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-              <input type="text" name="b_ae3483b8337544bb79239ea96_d2246758b5" tabIndex={-1} defaultValue="" />
-            </div>
-            <button type="submit" name="subscribe">SIGN UP</button>
-          </form>
+            SIGN ME UP!
+          </Link>
           <div className="bp-footer-social" aria-label="Social media">
             <span>FOLLOW THE JOY</span>
             <div className="bp-footer-social-links">
-              <Link href="/pages/social" aria-label="The Boompie on Instagram" title="Instagram">
+              <Link href="https://www.instagram.com/theboompie" target="_blank" rel="noopener noreferrer" aria-label="The Boompie on Instagram" title="Instagram">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.4"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/></svg>
               </Link>
-              <Link href="/pages/social" aria-label="The Boompie on Facebook" title="Facebook">
+              <Link href="https://www.facebook.com/theboompie" target="_blank" rel="noopener noreferrer" aria-label="The Boompie on Facebook" title="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.9 22v-8.3h2.8l.4-3.3h-3.2V8.3c0-1 .3-1.6 1.7-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.6 0-4.4 1.6-4.4 4.6v2.1H7.5v3.3h2.9V22h3.5Z"/></svg>
               </Link>
-              <Link href="/pages/social" aria-label="The Boompie on Pinterest" title="Pinterest">
+              <Link href="https://www.pinterest.com/theboompie" target="_blank" rel="noopener noreferrer" aria-label="The Boompie on Pinterest" title="Pinterest">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.6 19.3c0-.8 0-1.8.2-2.7l1.3-5.5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.8 0 1.2.6 1.2 1.4 0 .9-.6 2.2-.9 3.5-.3 1.1.5 2 1.6 2 1.9 0 3.4-2 3.4-4.8 0-2.5-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.5 0 .9.3 1.8.8 2.4l.2.6-.3 1.1c0 .2-.2.3-.5.2-1.3-.6-2.1-2.5-2.1-4.1 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6.1 0 3.7-2.3 6.6-5.4 6.6-1.1 0-2.2-.6-2.6-1.2l-.7 2.6c-.2 1-.9 2.1-1.3 2.9A10 10 0 1 0 12 2Z"/></svg>
               </Link>
-              <Link href="/pages/social" aria-label="The Boompie on YouTube" title="YouTube">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.1a2.8 2.8 0 0 0-2-2C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.6.5a2.8 2.8 0 0 0-2 2C2 8.9 2 12 2 12s0 3.1.4 4.9a2.8 2.8 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.8 2.8 0 0 0 2-2c.4-1.8.4-4.9.4-4.9s0-3.1-.4-4.9ZM10 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+              <Link href="https://www.tiktok.com/@theboompie" target="_blank" rel="noopener noreferrer" aria-label="The Boompie on TikTok" title="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.7 2h-3.3v13.3a3.2 3.2 0 1 1-2.8-3.2V8.7a6.6 6.6 0 1 0 6.1 6.6V8.5a8.6 8.6 0 0 0 5.1 1.6V6.8A5.2 5.2 0 0 1 16.7 2Z"/></svg>
               </Link>
             </div>
           </div>
