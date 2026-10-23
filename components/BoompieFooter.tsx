@@ -130,7 +130,7 @@ export function BoompieFooter() {
       </div>
       <div className="bp-footer-bottom">
         <span>© {new Date().getFullYear()} The Boompie. All rights reserved.</span>
-        <span>Great Finds <b>·</b> Great Deals <b>·</b> Greater Joy <b>·</b> People <b>·</b> Planet <b>·</b> Purpose</span>
+        <span>Great Finds <b>·</b> Great Deals <b>·</b> Greater Joy</span>
       </div>
     </div>
   </footer>;
