@@ -171,3 +171,7 @@
     min-height: 290px;
   }
 }
+
+@media (max-width: 767px) {
+  .boompie-home-hero { margin-top: -20px; }
+}
