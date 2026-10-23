@@ -49,8 +49,32 @@ export function BoompieFooter() {
     <div className="bp-footer-wave" aria-hidden="true" />
     <span className="bp-footer-flower bp-footer-flower-left" aria-hidden="true">✿</span>
     <span className="bp-footer-flower bp-footer-flower-right" aria-hidden="true">✿</span>
-    <span className="bp-footer-spark bp-footer-spark-left" aria-hidden="true">✳</span>
-    <span className="bp-footer-spark bp-footer-spark-right" aria-hidden="true">✳</span>
+    <svg className="bp-footer-spark bp-footer-spark-left" aria-hidden="true" viewBox="0 0 100 100" width="1em" height="1em" fill="none" style={ overflow: 'visible' }>
+      <g fill="currentColor">
+        <ellipse cx="50" cy="24" rx="16" ry="24" />
+        <ellipse cx="50" cy="76" rx="16" ry="24" />
+        <ellipse cx="24" cy="50" rx="24" ry="16" />
+        <ellipse cx="76" cy="50" rx="24" ry="16" />
+        <ellipse cx="32" cy="32" rx="15" ry="22" transform="rotate(-45 32 32)" />
+        <ellipse cx="68" cy="32" rx="15" ry="22" transform="rotate(45 68 32)" />
+        <ellipse cx="32" cy="68" rx="15" ry="22" transform="rotate(45 32 68)" />
+        <ellipse cx="68" cy="68" rx="15" ry="22" transform="rotate(-45 68 68)" />
+      </g>
+      <circle cx="50" cy="50" r="16" fill="#55258a" />
+    </svg>
+    <svg className="bp-footer-spark bp-footer-spark-right" aria-hidden="true" viewBox="0 0 100 100" width="1em" height="1em" fill="none" style={ overflow: 'visible' }>
+      <g fill="currentColor">
+        <ellipse cx="50" cy="24" rx="16" ry="24" />
+        <ellipse cx="50" cy="76" rx="16" ry="24" />
+        <ellipse cx="24" cy="50" rx="24" ry="16" />
+        <ellipse cx="76" cy="50" rx="24" ry="16" />
+        <ellipse cx="32" cy="32" rx="15" ry="22" transform="rotate(-45 32 32)" />
+        <ellipse cx="68" cy="32" rx="15" ry="22" transform="rotate(45 68 32)" />
+        <ellipse cx="32" cy="68" rx="15" ry="22" transform="rotate(45 32 68)" />
+        <ellipse cx="68" cy="68" rx="15" ry="22" transform="rotate(-45 68 68)" />
+      </g>
+      <circle cx="50" cy="50" r="16" fill="#55258a" />
+    </svg>
     <div className="bp-footer-inner">
       <div className="bp-footer-grid">
         <div className="bp-footer-brand">

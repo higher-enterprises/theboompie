@@ -1,9 +1,9 @@
 
 import CartModal from "components/cart/modal";
-import BoompieMobileNav from "./BoompieMobileNav";
 import { categories, categoryHref } from "lib/boompie/categories";
 import Image from "next/image";
 import Link from "next/link";
+import BoompieMobileNav from "./BoompieMobileNav";
 
 type IconName = "search" | "user" | "bag";
 
@@ -54,7 +54,7 @@ const navigation = categories.map((category) => ({
 export function BoompieHeader() {
   return (
     <header className="relative z-50 w-full bg-[#fffaf0]">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-3 py-2 md:gap-6 md:px-8 md:py-3">
+      <div className="flex w-full items-center justify-between gap-2 px-3 py-2 md:gap-4 md:px-[5vw] md:py-3">
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           <BoompieMobileNav items={navigation} />
@@ -79,14 +79,14 @@ export function BoompieHeader() {
 
         {/* Main navigation */}
         <nav
-          className="hidden items-center gap-8 lg:flex"
+          className="ml-auto hidden min-w-0 items-center justify-end gap-4 xl:gap-6 lg:flex"
           aria-label="Main navigation"
         >
           {navigation.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-bold tracking-wide transition-colors hover:text-[#55258A]"
+              className="whitespace-nowrap text-[11px] font-bold tracking-wide transition-colors hover:text-[#55258A] xl:text-xs 2xl:text-sm"
             >
               {item.label}
             </Link>
@@ -94,7 +94,7 @@ export function BoompieHeader() {
         </nav>
 
         {/* Header tools */}
-        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-4 md:ml-0 md:gap-5">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-4 lg:ml-2 lg:gap-4 xl:gap-5">
           <Link href="/search" aria-label="Search">
             <Icon name="search" />
           </Link>
