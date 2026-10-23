@@ -63,3 +63,13 @@
   .boompie-hero__title { font-size: clamp(34px, 8vw, 55px); }
   .boompie-hero__copy p { font-size: 14px; }
 }
+
+/* Mobile: larger photograph first, shorter yellow copy panel. Desktop untouched. */
+@media (max-width: 767px) {
+  .boompie-hero { margin-bottom: 12px; padding-inline: 8px; gap: 0; }
+  .boompie-hero__photo { order: 0; height: clamp(300px, 94vw, 420px); margin: 0; }
+  .boompie-hero__yellow { order: 1; min-height: 0; padding: 28px 8% 30px; margin-top: -5px; }
+  .boompie-hero__title { font-size: clamp(30px, 8.4vw, 45px); margin-bottom: 10px; }
+  .boompie-hero__copy p { font-size: 12px; line-height: 1.35; margin-bottom: 12px; }
+  .boompie-hero__button { min-height: 36px; padding: 8px 13px; }
+}

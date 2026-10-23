@@ -64,3 +64,24 @@
 @media (max-width: 1150px) { .bp-footer-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } .bp-footer-brand { grid-column: 1 / -1; padding-top: 0; } .bp-footer-join { grid-column: span 2; } }
 @media (max-width: 680px) { .bp-footer-column .bp-footer-shop-links { column-gap: 10px; }  .bp-footer { padding: 70px 18px 25px; } .bp-footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 12px; } .bp-footer-brand,.bp-footer-join { grid-column: 1 / -1; } .bp-footer-column { padding-left: 12px; } .bp-footer-column h2,.bp-footer-join h2 { font-size: 12px; } .bp-footer-column .bp-footer-shop-links { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
 .bp-footer-column a { font-size: 12px; } .bp-footer-bottom { font-size: 11px; } .bp-footer-flower-left { font-size: 125px; left: -65px; } }
+
+/* Single separators between columns, with breathing room on both sides. */
+@media (min-width: 681px) {
+  .bp-footer-grid { column-gap: clamp(14px, 1.7vw, 28px); }
+  .bp-footer-column, .bp-footer-join { border-left: 1px solid rgba(255,255,255,.26); padding-left: clamp(14px, 1.7vw, 28px); }
+}
+@media (max-width: 680px) {
+  .bp-footer-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 0; row-gap: 26px; }
+  .bp-footer-brand { grid-column: 1 / -1; }
+  .bp-footer-grid > .bp-footer-column:nth-child(2) { grid-column: 1; grid-row: 2; border: 0; padding: 0 14px 0 0; }
+  .bp-footer-grid > .bp-footer-column:nth-child(3) { grid-column: 2; grid-row: 2; border-left: 1px solid rgba(255,255,255,.28); padding: 0 0 0 14px; }
+  .bp-footer-grid > .bp-footer-column:nth-child(4) { grid-column: 1; grid-row: 3; border: 0; padding: 0 14px 0 0; }
+  .bp-footer-grid > .bp-footer-join { grid-column: 2; grid-row: 3; border-left: 1px solid rgba(255,255,255,.28); padding: 0 0 0 14px; min-width: 0; }
+  .bp-footer-column .bp-footer-shop-links { grid-template-columns: 1fr; }
+  .bp-footer-join p { font-size: 11px; line-height: 1.55; margin-bottom: 14px; }
+  .bp-footer-joy-button { min-height: 42px !important; padding: 9px 8px !important; font-size: 11px; }
+  .bp-footer-social { align-items: flex-start; flex-direction: column; gap: 9px; margin: 20px 0 0; }
+  .bp-footer-social-links { gap: 7px; flex-wrap: wrap; }
+  .bp-footer-social-links a { width: 23px; height: 23px; }
+  .bp-footer-social-links svg { width: 19px; height: 19px; }
+}
