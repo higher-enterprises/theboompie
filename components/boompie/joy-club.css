@@ -181,3 +181,59 @@
   .jc-perk-copy h3 { font-size: 11.5px; }
   .jc-perk-copy p { font-size: 11.5px; }
 }
+
+
+/* Mobile-only finishing pass: keep the wave below the Joy Club artwork
+   and carry the pink background all the way to the footer. */
+@media (max-width: 760px) {
+  .jc-page,
+  .jc-top {
+    background: #f9cce6;
+  }
+
+  /* Remove the old viewport-top-anchored wave. */
+  .jc-top::after {
+    content: none;
+    display: none;
+  }
+
+  /* Place the same decorative wave at the hero's actual bottom,
+     rather than at a fixed pixel position that crosses the logo. */
+  .jc-hero {
+    position: relative;
+    isolation: isolate;
+  }
+  .jc-hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 46px;
+    background: url('/assets/boompie/joyclub/joy-club-wave.svg') center bottom / 100% 100% no-repeat;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .jc-hero-copy {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 88px;
+  }
+  .jc-hero-title {
+    position: relative;
+    z-index: 2;
+  }
+  .jc-signup,
+  .jc-perks {
+    position: relative;
+    z-index: 2;
+  }
+  .jc-perks {
+    background: #f9cce6;
+    margin-bottom: 0;
+    padding-bottom: 44px;
+  }
+}
+@media (max-width: 520px) {
+  .jc-hero-copy { padding-bottom: 85px; }
+}
