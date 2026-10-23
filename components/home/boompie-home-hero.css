@@ -113,3 +113,37 @@
   .boompie-home-hero__buttons { gap: 7px; }
   .boompie-home-hero__button { font-size: 9px; padding-inline: 10px; }
 }
+
+
+/* Mobile hero: full-bleed, taller photo without the desktop silhouette mask. */
+@media (max-width: 767px) {
+  .boompie-home-hero {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    gap: 0;
+  }
+
+  .boompie-home-hero__yellow {
+    flex: none;
+    min-height: 290px;
+  }
+
+  .boompie-home-hero__photo {
+    position: relative;
+    inset: auto;
+    display: block;
+    flex: none;
+    width: 100%;
+    height: clamp(420px, 120vw, 640px);
+    overflow: hidden;
+    -webkit-mask: none;
+    mask: none;
+    background: #fffaf2;
+  }
+
+  .boompie-home-hero__photo-image {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
